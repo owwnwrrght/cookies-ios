@@ -29,6 +29,22 @@ final class NFCScanner: NSObject, ObservableObject, NFCNDEFReaderSessionDelegate
         self.session = session
     }
 
+    func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
+        guard let message = messages.first,
+              let token = extractToken(from: message) else {
+            session.invalidate(errorMessage: "Invalid NFC tag.")
+            onError?("This tag is not provisioned for Cookies.")
+            return
+        }
+
+        session.alertMessage = "Tag scanned."
+        didReadToken = true
+        session.invalidate()
+        DispatchQueue.main.async { [weak self] in
+            self?.onTokenRead?(token)
+        }
+    }
+
     func readerSession(_ session: NFCNDEFReaderSession, didDetect tags: [NFCNDEFTag]) {
         guard let tag = tags.first else {
             session.invalidate(errorMessage: "No NFC tag detected.")
@@ -80,7 +96,8 @@ final class NFCScanner: NSObject, ObservableObject, NFCNDEFReaderSessionDelegate
 
     private func extractToken(from message: NFCNDEFMessage?) -> String? {
         guard let records = message?.records, let record = records.first else { return nil }
-        if let (text, _) = record.wellKnownTypeTextPayload() {
+        let (text, _) = record.wellKnownTypeTextPayload()
+        if let text {
             return normalizeToken(text)
         }
         if let payloadString = String(data: record.payload, encoding: .utf8) {

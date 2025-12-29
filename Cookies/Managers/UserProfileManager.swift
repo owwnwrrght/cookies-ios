@@ -90,10 +90,10 @@ final class UserProfileManager: ObservableObject {
     func updateTimezoneOffsetMinutes(userId: String, completion: ((Result<Void, Error>) -> Void)? = nil) {
         let offsetMinutes = TimeZone.current.secondsFromGMT() / 60
         let userRef = database.collection("users").document(userId)
-        userRef.updateData([
+        userRef.setData([
             "timezoneOffsetMinutes": offsetMinutes,
             "timezoneUpdatedAt": FieldValue.serverTimestamp()
-        ]) { error in
+        ], merge: true) { error in
             guard let completion else { return }
             if let error {
                 completion(.failure(error))

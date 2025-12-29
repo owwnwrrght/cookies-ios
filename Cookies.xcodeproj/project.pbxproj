@@ -13,6 +13,7 @@
 		A1B2C3D4E5F60123456789AC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60123456789AF /* XCTest.framework */; };
 		A1B2C3D4E5F60123456789B8 /* FirestoreIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60123456789B7 /* FirestoreIntegrationTests.swift */; };
 		A0251B54F06E763725D7FB45 /* CookiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D627867970FE2155A28B9C /* CookiesApp.swift */; };
+		F2A8C9B1D3E4F5678901ABCD /* AppAttestProviderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B2C3D4E5F60718293A4B5C /* AppAttestProviderFactory.swift */; };
 		837D2B4D2FAA9E9BE854138C /* UserProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C358F370030DE42E02051FA /* UserProfileManager.swift */; };
 		A884E8C400413329EF370671 /* ScreenTimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B6935D7EA7445CE8E59C7D /* ScreenTimeManager.swift */; };
 		61C7813A60D6D52390327410 /* TimeAllowanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343D4B2C32B5978878B4BE7E /* TimeAllowanceManager.swift */; };
@@ -55,6 +56,7 @@
 		DB82012DA91A9E58D4A276B0 /* Pods_Cookies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cookies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F671AA571CA7A51708192E59 /* Pods-CookiesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookiesTests.debug.xcconfig"; path = "Target Support Files/Pods-CookiesTests/Pods-CookiesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		27D627867970FE2155A28B9C /* CookiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookiesApp.swift; sourceTree = "<group>"; };
+		E1B2C3D4E5F60718293A4B5C /* AppAttestProviderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAttestProviderFactory.swift; sourceTree = "<group>"; };
 		0C358F370030DE42E02051FA /* UserProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileManager.swift; sourceTree = "<group>"; };
 		98B6935D7EA7445CE8E59C7D /* ScreenTimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeManager.swift; sourceTree = "<group>"; };
 		343D4B2C32B5978878B4BE7E /* TimeAllowanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAllowanceManager.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 		A1B0C471C8C5AE9DBD897D9D /* App */ = {
 			isa = PBXGroup;
 			children = (
+				E1B2C3D4E5F60718293A4B5C /* AppAttestProviderFactory.swift */,
 				27D627867970FE2155A28B9C /* CookiesApp.swift */,
 			);
 			path = App;
@@ -421,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2A8C9B1D3E4F5678901ABCD /* AppAttestProviderFactory.swift in Sources */,
 				A0251B54F06E763725D7FB45 /* CookiesApp.swift in Sources */,
 				D862477A4C77B5B6C4BFAEEA /* AuthViewModel.swift in Sources */,
 				ACFD9E42244CA848370315BE /* AuthGateView.swift in Sources */,

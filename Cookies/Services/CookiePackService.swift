@@ -52,6 +52,40 @@ enum CookiePackError: LocalizedError {
 final class CookiePackService {
     private let database = Firestore.firestore()
 
+    private struct PackClaimContext {
+        let packId: String
+        let cookies: [(id: String, type: CookieType)]
+    }
+
+    private func parsePackCookies(_ data: [String: Any], cookieId: String) throws -> [(id: String, type: CookieType)] {
+        guard let rawCookies = data["cookies"] as? [[String: Any]], !rawCookies.isEmpty else {
+            throw CookiePackError.invalidPack
+        }
+
+        var parsedCookies: [(id: String, type: CookieType)] = []
+        for item in rawCookies {
+            guard let id = item["id"] as? String,
+                  let typeStr = item["type"] as? String,
+                  let type = CookieType(rawValue: typeStr) else {
+                throw CookiePackError.invalidPack
+            }
+            parsedCookies.append((id: id, type: type))
+        }
+
+        let uniqueIds = Set(parsedCookies.map { $0.id })
+        guard
+            uniqueIds.count == parsedCookies.count,
+            parsedCookies.count == 4,
+            let firstType = parsedCookies.first?.type,
+            parsedCookies.allSatisfy({ $0.type == firstType }),
+            parsedCookies.contains(where: { $0.id == cookieId })
+        else {
+            throw CookiePackError.invalidPack
+        }
+
+        return parsedCookies
+    }
+
     /// Creates a new pack of 4 cookies in Firestore.
     /// - Parameters:
     ///   - cookies: A list of tuples containing the Cookie ID and Type.
@@ -121,55 +155,35 @@ final class CookiePackService {
         let userRef = database.collection("users").document(userId)
         let userCookiesRef = userRef.collection("cookies")
 
-        try await database.runTransaction { transaction, errorPointer in
+        let context = try await database.runTransaction { transaction, errorPointer -> Any? in
             do {
-                // 1. Find the Pack ID from the Registry
                 let registrySnapshot = try transaction.getDocument(registryRef)
                 guard let registryData = registrySnapshot.data(),
                       let packId = registryData["packId"] as? String else {
                     throw CookiePackError.packNotFound
                 }
 
-                // 2. Fetch the Pack
                 let packRef = self.database.collection("packs").document(packId)
                 let packSnapshot = try transaction.getDocument(packRef)
-                
                 guard packSnapshot.exists, let data = packSnapshot.data() else {
                     throw CookiePackError.packNotFound
                 }
 
-                // 3. Check Pack Status
-                if let status = data["status"] as? String, status == "claimed" {
-                    throw CookiePackError.packAlreadyClaimed
-                }
+                let parsedCookies = try self.parsePackCookies(data, cookieId: cookieId)
+                let status = data["status"] as? String
+                let claimedBy = data["claimedBy"] as? String
 
-                // 4. Validate Pack Contents
-                guard let rawCookies = data["cookies"] as? [[String: Any]], !rawCookies.isEmpty else {
-                    throw CookiePackError.invalidPack
-                }
-
-                // Parse Cookies
-                var parsedCookies: [(id: String, type: CookieType)] = []
-                for item in rawCookies {
-                    guard let id = item["id"] as? String,
-                          let typeStr = item["type"] as? String,
-                          let type = CookieType(rawValue: typeStr) else {
-                        throw CookiePackError.invalidPack
+                if status == "claimed" {
+                    guard claimedBy == userId else {
+                        throw CookiePackError.packAlreadyClaimed
                     }
-                    parsedCookies.append((id: id, type: type))
+                    return PackClaimContext(packId: packRef.documentID, cookies: parsedCookies)
                 }
 
-                let uniqueIds = Set(parsedCookies.map { $0.id })
-                guard
-                    uniqueIds.count == parsedCookies.count,
-                    parsedCookies.count == 4,
-                    let firstType = parsedCookies.first?.type,
-                    parsedCookies.allSatisfy({ $0.type == firstType })
-                else {
+                guard status == nil || status == "available" else {
                     throw CookiePackError.invalidPack
                 }
 
-                // 5. Verify User Doesn't Already Have These Cookies
                 for cookie in parsedCookies {
                     let cookieRef = userCookiesRef.document(cookie.id)
                     let snapshot = try transaction.getDocument(cookieRef)
@@ -178,18 +192,6 @@ final class CookiePackService {
                     }
                 }
 
-                // 6. Perform Updates
-                // Assign cookies to user
-                for cookie in parsedCookies {
-                    let cookieRef = userCookiesRef.document(cookie.id)
-                    transaction.setData([
-                        "type": cookie.type.rawValue,
-                        "packId": packRef.documentID,
-                        "assignedAt": FieldValue.serverTimestamp()
-                    ], forDocument: cookieRef)
-                }
-
-                // Mark pack as claimed
                 transaction.updateData([
                     "status": "claimed",
                     "claimedBy": userId,
@@ -197,8 +199,47 @@ final class CookiePackService {
                     "claimCookieId": cookieId
                 ], forDocument: packRef)
 
+                return PackClaimContext(packId: packRef.documentID, cookies: parsedCookies)
+            } catch let error as NSError {
+                errorPointer?.pointee = error
                 return nil
+            }
+        }
 
+        guard let claimContext = context as? PackClaimContext else {
+            throw CookiePackError.unknownError
+        }
+
+        try await database.runTransaction { transaction, errorPointer in
+            do {
+                var snapshots: [String: DocumentSnapshot] = [:]
+                for cookie in claimContext.cookies {
+                    let cookieRef = userCookiesRef.document(cookie.id)
+                    let snapshot = try transaction.getDocument(cookieRef)
+                    snapshots[cookie.id] = snapshot
+                }
+
+                for cookie in claimContext.cookies {
+                    guard let snapshot = snapshots[cookie.id] else { continue }
+                    if snapshot.exists {
+                        let data = snapshot.data() ?? [:]
+                        let existingPackId = data["packId"] as? String
+                        let existingType = data["type"] as? String
+                        if existingPackId != claimContext.packId || existingType != cookie.type.rawValue {
+                            throw CookiePackError.cookieAlreadyRegistered
+                        }
+                        continue
+                    }
+
+                    let cookieRef = userCookiesRef.document(cookie.id)
+                    transaction.setData([
+                        "type": cookie.type.rawValue,
+                        "packId": claimContext.packId,
+                        "assignedAt": FieldValue.serverTimestamp()
+                    ], forDocument: cookieRef)
+                }
+
+                return nil
             } catch let error as NSError {
                 errorPointer?.pointee = error
                 return nil

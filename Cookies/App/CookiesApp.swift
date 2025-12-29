@@ -82,15 +82,15 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     private func configureAppCheck() {
 #if DEBUG
         let env = ProcessInfo.processInfo.environment
-        if env["USE_FIREBASE_EMULATORS"] == "1" {
+        if env["USE_REAL_APP_CHECK"] == "1" {
+#if targetEnvironment(simulator)
             AppCheck.setAppCheckProviderFactory(AppCheckDebugProviderFactory())
+#else
+            AppCheck.setAppCheckProviderFactory(AppAttestProviderFactory())
+#endif
             return
         }
-#if targetEnvironment(simulator)
         AppCheck.setAppCheckProviderFactory(AppCheckDebugProviderFactory())
-#else
-        AppCheck.setAppCheckProviderFactory(AppAttestProviderFactory())
-#endif
 #else
         AppCheck.setAppCheckProviderFactory(AppAttestProviderFactory())
 #endif
