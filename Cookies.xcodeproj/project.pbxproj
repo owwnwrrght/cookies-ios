@@ -1,0 +1,736 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D239A0A275CCA587F6F1E71 /* Pods_CookiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5773CADFFEB53A922747DF53 /* Pods_CookiesTests.framework */; };
+		98242B8CDF8F1BD143CB94B8 /* Pods_Cookies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB82012DA91A9E58D4A276B0 /* Pods_Cookies.framework */; };
+		A1B2C3D4E5F60123456789AB /* CookiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60123456789AD /* CookiesTests.swift */; };
+		A1B2C3D4E5F60123456789AC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60123456789AF /* XCTest.framework */; };
+		A1B2C3D4E5F60123456789B8 /* FirestoreIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60123456789B7 /* FirestoreIntegrationTests.swift */; };
+		A0251B54F06E763725D7FB45 /* CookiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D627867970FE2155A28B9C /* CookiesApp.swift */; };
+		837D2B4D2FAA9E9BE854138C /* UserProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C358F370030DE42E02051FA /* UserProfileManager.swift */; };
+		A884E8C400413329EF370671 /* ScreenTimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B6935D7EA7445CE8E59C7D /* ScreenTimeManager.swift */; };
+		61C7813A60D6D52390327410 /* TimeAllowanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343D4B2C32B5978878B4BE7E /* TimeAllowanceManager.swift */; };
+		767A47E4969EC43156F5BD5F /* UsageSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08F2665C3D5FA5D2AB3158C /* UsageSessionManager.swift */; };
+		3026E030AA366BF3189A9E90 /* NFCScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C4BF17DC2D18C2F14F8590 /* NFCScanner.swift */; };
+		0145D04163038FB4994BCEE4 /* CookiePackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5813ACA343BF553F861A6B /* CookiePackService.swift */; };
+		7666772FABB988E652883A4E /* CookieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE66A2C7C5FAA13DE552DD09 /* CookieService.swift */; };
+		D862477A4C77B5B6C4BFAEEA /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A02235B3D833AF18F942940 /* AuthViewModel.swift */; };
+		625DF21FC5BC14B877050441 /* InsightsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE9101F221F33E3C93D83DD /* InsightsViewModel.swift */; };
+		9A4CC1BDF3CDC2BCB8DA12EA /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588509A26AED265E110014DB /* MainTabView.swift */; };
+		F132258731B577845AEB2CC0 /* CookieOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CB9EE82170E7A4CC73B5A8 /* CookieOnboardingView.swift */; };
+		2DAF258EE2948E9B3928E954 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C903D5AE2047291278747B73 /* SettingsView.swift */; };
+		ACFD9E42244CA848370315BE /* AuthGateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED87BFA15C3065E0F95B9E1E /* AuthGateView.swift */; };
+		BCFC1B1C63F8078E1D5B2BA5 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557E90DFA2A8AFAC0F7760BE /* SignInView.swift */; };
+		EDF7B7CCC1570B262D4AC59E /* InsightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FBA96C6844A89EE709DE4B /* InsightsView.swift */; };
+		DF8FD4F68CD2602D5B049E0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A8925F5A55E008D3ECF60 /* ContentView.swift */; };
+		E8F483E994D789804046046F /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF0C13B72B0ACA7E3EDEC5 /* ShieldConfigurationExtension.swift */; };
+		A4BDDCB1A5BB40C68107F895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AE0E42D1FBC500FE6C89777 /* Assets.xcassets */; };
+		28DDB57EF5DB8680C81F979F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01BFF25AB63154E1DFB0005E /* LaunchScreen.storyboard */; };
+		24F6D6A5B48075040D5344B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA96B0D5ACE938C5B5699416 /* GoogleService-Info.plist */; };
+		A80966CFF153DF9154AC91E3 /* ShieldConfigurationInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4714DB90EDAAD0811E917A84 /* ShieldConfigurationInfo.plist */; };
+/* End PBXBuildFile section */
+
+
+
+/* Begin PBXFileReference section */
+		4E154F932EF63149003C8D69 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		4E154F952EF63149003C8D69 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		4E6DC23D2EF6113F005145BA /* Cookies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cookies.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5773CADFFEB53A922747DF53 /* Pods_CookiesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookiesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DEE6059E7194FA49ACACA85 /* Pods-Cookies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cookies.release.xcconfig"; path = "Target Support Files/Pods-Cookies/Pods-Cookies.release.xcconfig"; sourceTree = "<group>"; };
+		7769D99F396F96A79036A72D /* Pods-Quarter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quarter.debug.xcconfig"; path = "Target Support Files/Pods-Quarter/Pods-Quarter.debug.xcconfig"; sourceTree = "<group>"; };
+		84A02A6F5B8161B077DC9FD9 /* Pods-Quarter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quarter.release.xcconfig"; path = "Target Support Files/Pods-Quarter/Pods-Quarter.release.xcconfig"; sourceTree = "<group>"; };
+		A1B2C3D4E5F60123456789AD /* CookiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookiesTests.swift; sourceTree = "<group>"; };
+		A1B2C3D4E5F60123456789AE /* CookiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1B2C3D4E5F60123456789AF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
+		A1B2C3D4E5F60123456789B7 /* FirestoreIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreIntegrationTests.swift; sourceTree = "<group>"; };
+		AFCD5DF4CBD7D9B4C2560694 /* Pods-Cookies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cookies.debug.xcconfig"; path = "Target Support Files/Pods-Cookies/Pods-Cookies.debug.xcconfig"; sourceTree = "<group>"; };
+		C006D0EECB1927E437B68A69 /* Pods-CookiesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookiesTests.release.xcconfig"; path = "Target Support Files/Pods-CookiesTests/Pods-CookiesTests.release.xcconfig"; sourceTree = "<group>"; };
+		DB82012DA91A9E58D4A276B0 /* Pods_Cookies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cookies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F671AA571CA7A51708192E59 /* Pods-CookiesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookiesTests.debug.xcconfig"; path = "Target Support Files/Pods-CookiesTests/Pods-CookiesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		27D627867970FE2155A28B9C /* CookiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookiesApp.swift; sourceTree = "<group>"; };
+		0C358F370030DE42E02051FA /* UserProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileManager.swift; sourceTree = "<group>"; };
+		98B6935D7EA7445CE8E59C7D /* ScreenTimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeManager.swift; sourceTree = "<group>"; };
+		343D4B2C32B5978878B4BE7E /* TimeAllowanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAllowanceManager.swift; sourceTree = "<group>"; };
+		A08F2665C3D5FA5D2AB3158C /* UsageSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageSessionManager.swift; sourceTree = "<group>"; };
+		F3C4BF17DC2D18C2F14F8590 /* NFCScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCScanner.swift; sourceTree = "<group>"; };
+		3E5813ACA343BF553F861A6B /* CookiePackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookiePackService.swift; sourceTree = "<group>"; };
+		EE66A2C7C5FAA13DE552DD09 /* CookieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieService.swift; sourceTree = "<group>"; };
+		5A02235B3D833AF18F942940 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		FFE9101F221F33E3C93D83DD /* InsightsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsViewModel.swift; sourceTree = "<group>"; };
+		588509A26AED265E110014DB /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		13CB9EE82170E7A4CC73B5A8 /* CookieOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieOnboardingView.swift; sourceTree = "<group>"; };
+		C903D5AE2047291278747B73 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		ED87BFA15C3065E0F95B9E1E /* AuthGateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthGateView.swift; sourceTree = "<group>"; };
+		557E90DFA2A8AFAC0F7760BE /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		C7FBA96C6844A89EE709DE4B /* InsightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsView.swift; sourceTree = "<group>"; };
+		261A8925F5A55E008D3ECF60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8BBF0C13B72B0ACA7E3EDEC5 /* ShieldConfigurationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldConfigurationExtension.swift; sourceTree = "<group>"; };
+		7AE0E42D1FBC500FE6C89777 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "../Assets.xcassets"; sourceTree = "<group>"; };
+		01BFF25AB63154E1DFB0005E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA96B0D5ACE938C5B5699416 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3515935045C963E8CD219D60 /* Cookies.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cookies.entitlements; sourceTree = "<group>"; };
+		4714DB90EDAAD0811E917A84 /* ShieldConfigurationInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ShieldConfigurationInfo.plist; sourceTree = "<group>"; };
+		F640C07F8503462167BEBDE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E6DC23A2EF6113F005145BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98242B8CDF8F1BD143CB94B8 /* Pods_Cookies.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+
+		A1B2C3D4E5F60123456789B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B2C3D4E5F60123456789AC /* XCTest.framework in Frameworks */,
+				3D239A0A275CCA587F6F1E71 /* Pods_CookiesTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E6DC2342EF6113F005145BA = {
+			isa = PBXGroup;
+			children = (
+				4E6DC23F2EF6113F005145BA /* Cookies */,
+				963724CDA494DE055E3C2764 /* Config */,
+				A1B2C3D4E5F60123456789B0 /* CookiesTests */,
+				4E6DC23E2EF6113F005145BA /* Products */,
+				673B3F6879171360ED924CB9 /* Pods */,
+				A9F1911FC2D3DBC617ABF37D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4E6DC23F2EF6113F005145BA /* Cookies */ = {
+			isa = PBXGroup;
+			children = (
+				A1B0C471C8C5AE9DBD897D9D /* App */,
+				BF9DC3AE9D8F8D475E18146B /* Managers */,
+				8AAC615387E10ED0FB18BD2D /* Services */,
+				8C3C7F9E3EBED0D92B5F13DE /* ViewModels */,
+				ED7E29CAAA57A56C7D461048 /* Views */,
+				D82F86F94F138CA02FD1043E /* Resources */,
+				21DAFD929CAE2414D066C7D9 /* Extensions */,
+			);
+			path = Cookies;
+			sourceTree = "<group>";
+		};
+		4E6DC23E2EF6113F005145BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E6DC23D2EF6113F005145BA /* Cookies.app */,
+				A1B2C3D4E5F60123456789AE /* CookiesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		673B3F6879171360ED924CB9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7769D99F396F96A79036A72D /* Pods-Quarter.debug.xcconfig */,
+				84A02A6F5B8161B077DC9FD9 /* Pods-Quarter.release.xcconfig */,
+				AFCD5DF4CBD7D9B4C2560694 /* Pods-Cookies.debug.xcconfig */,
+				6DEE6059E7194FA49ACACA85 /* Pods-Cookies.release.xcconfig */,
+				F671AA571CA7A51708192E59 /* Pods-CookiesTests.debug.xcconfig */,
+				C006D0EECB1927E437B68A69 /* Pods-CookiesTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A1B2C3D4E5F60123456789B0 /* CookiesTests */ = {
+			isa = PBXGroup;
+			children = (
+				A1B2C3D4E5F60123456789AD /* CookiesTests.swift */,
+				A1B2C3D4E5F60123456789B7 /* FirestoreIntegrationTests.swift */,
+			);
+			path = CookiesTests;
+			sourceTree = "<group>";
+		};
+		A9F1911FC2D3DBC617ABF37D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E154F932EF63149003C8D69 /* WidgetKit.framework */,
+				4E154F952EF63149003C8D69 /* SwiftUI.framework */,
+				A1B2C3D4E5F60123456789AF /* XCTest.framework */,
+				DB82012DA91A9E58D4A276B0 /* Pods_Cookies.framework */,
+				5773CADFFEB53A922747DF53 /* Pods_CookiesTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1B0C471C8C5AE9DBD897D9D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				27D627867970FE2155A28B9C /* CookiesApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BF9DC3AE9D8F8D475E18146B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				98B6935D7EA7445CE8E59C7D /* ScreenTimeManager.swift */,
+				343D4B2C32B5978878B4BE7E /* TimeAllowanceManager.swift */,
+				A08F2665C3D5FA5D2AB3158C /* UsageSessionManager.swift */,
+				0C358F370030DE42E02051FA /* UserProfileManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		8AAC615387E10ED0FB18BD2D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3E5813ACA343BF553F861A6B /* CookiePackService.swift */,
+				EE66A2C7C5FAA13DE552DD09 /* CookieService.swift */,
+				F3C4BF17DC2D18C2F14F8590 /* NFCScanner.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8C3C7F9E3EBED0D92B5F13DE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5A02235B3D833AF18F942940 /* AuthViewModel.swift */,
+				FFE9101F221F33E3C93D83DD /* InsightsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		ED7E29CAAA57A56C7D461048 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED87BFA15C3065E0F95B9E1E /* AuthGateView.swift */,
+				13CB9EE82170E7A4CC73B5A8 /* CookieOnboardingView.swift */,
+				261A8925F5A55E008D3ECF60 /* ContentView.swift */,
+				588509A26AED265E110014DB /* MainTabView.swift */,
+				C903D5AE2047291278747B73 /* SettingsView.swift */,
+				557E90DFA2A8AFAC0F7760BE /* SignInView.swift */,
+				C7FBA96C6844A89EE709DE4B /* InsightsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D82F86F94F138CA02FD1043E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7AE0E42D1FBC500FE6C89777 /* Assets.xcassets */,
+				3515935045C963E8CD219D60 /* Cookies.entitlements */,
+				EA96B0D5ACE938C5B5699416 /* GoogleService-Info.plist */,
+				01BFF25AB63154E1DFB0005E /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		963724CDA494DE055E3C2764 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F640C07F8503462167BEBDE4 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		21DAFD929CAE2414D066C7D9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				94C69673881C44B3AF8000F5 /* ShieldConfigurationExtension */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		94C69673881C44B3AF8000F5 /* ShieldConfigurationExtension */ = {
+			isa = PBXGroup;
+			children = (
+				8BBF0C13B72B0ACA7E3EDEC5 /* ShieldConfigurationExtension.swift */,
+				4714DB90EDAAD0811E917A84 /* ShieldConfigurationInfo.plist */,
+			);
+			path = ShieldConfigurationExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4E6DC23C2EF6113F005145BA /* Cookies */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E6DC2482EF61140005145BA /* Build configuration list for PBXNativeTarget "Cookies" */;
+			buildPhases = (
+				565E4244ACD227C02FF3131D /* [CP] Check Pods Manifest.lock */,
+				4E6DC2392EF6113F005145BA /* Sources */,
+				4E6DC23A2EF6113F005145BA /* Frameworks */,
+				4E6DC23B2EF6113F005145BA /* Resources */,
+				6320F02F6C6ACD9A88FF14E6 /* [CP] Embed Pods Frameworks */,
+
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cookies;
+			productName = Cookies;
+			productReference = 4E6DC23D2EF6113F005145BA /* Cookies.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A1B2C3D4E5F60123456789B3 /* CookiesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1B2C3D4E5F60123456789B4 /* Build configuration list for PBXNativeTarget "CookiesTests" */;
+			buildPhases = (
+				78D764F3A2523B4F15386774 /* [CP] Check Pods Manifest.lock */,
+				A1B2C3D4E5F60123456789B1 /* Sources */,
+				A1B2C3D4E5F60123456789B2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CookiesTests;
+			productName = CookiesTests;
+			productReference = A1B2C3D4E5F60123456789AE /* CookiesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4E6DC2352EF6113F005145BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 0;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					4E6DC23C2EF6113F005145BA = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					A1B2C3D4E5F60123456789B3 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+				};
+			};
+			buildConfigurationList = 4E6DC2382EF6113F005145BA /* Build configuration list for PBXProject "Cookies" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4E6DC2342EF6113F005145BA;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 4E6DC23E2EF6113F005145BA /* Products */;
+			compatibilityVersion = "Xcode 16.0";
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4E6DC23C2EF6113F005145BA /* Cookies */,
+				A1B2C3D4E5F60123456789B3 /* CookiesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4E6DC23B2EF6113F005145BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4BDDCB1A5BB40C68107F895 /* Assets.xcassets in Resources */,
+				28DDB57EF5DB8680C81F979F /* LaunchScreen.storyboard in Resources */,
+				24F6D6A5B48075040D5344B7 /* GoogleService-Info.plist in Resources */,
+				A80966CFF153DF9154AC91E3 /* ShieldConfigurationInfo.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		565E4244ACD227C02FF3131D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cookies-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6320F02F6C6ACD9A88FF14E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cookies/Pods-Cookies-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cookies/Pods-Cookies-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cookies/Pods-Cookies-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78D764F3A2523B4F15386774 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CookiesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4E6DC2392EF6113F005145BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0251B54F06E763725D7FB45 /* CookiesApp.swift in Sources */,
+				D862477A4C77B5B6C4BFAEEA /* AuthViewModel.swift in Sources */,
+				ACFD9E42244CA848370315BE /* AuthGateView.swift in Sources */,
+				0145D04163038FB4994BCEE4 /* CookiePackService.swift in Sources */,
+				F132258731B577845AEB2CC0 /* CookieOnboardingView.swift in Sources */,
+				DF8FD4F68CD2602D5B049E0C /* ContentView.swift in Sources */,
+				EDF7B7CCC1570B262D4AC59E /* InsightsView.swift in Sources */,
+				625DF21FC5BC14B877050441 /* InsightsViewModel.swift in Sources */,
+				9A4CC1BDF3CDC2BCB8DA12EA /* MainTabView.swift in Sources */,
+				3026E030AA366BF3189A9E90 /* NFCScanner.swift in Sources */,
+				BCFC1B1C63F8078E1D5B2BA5 /* SignInView.swift in Sources */,
+				A884E8C400413329EF370671 /* ScreenTimeManager.swift in Sources */,
+				2DAF258EE2948E9B3928E954 /* SettingsView.swift in Sources */,
+				61C7813A60D6D52390327410 /* TimeAllowanceManager.swift in Sources */,
+				767A47E4969EC43156F5BD5F /* UsageSessionManager.swift in Sources */,
+				7666772FABB988E652883A4E /* CookieService.swift in Sources */,
+				837D2B4D2FAA9E9BE854138C /* UserProfileManager.swift in Sources */,
+				E8F483E994D789804046046F /* ShieldConfigurationExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+
+		A1B2C3D4E5F60123456789B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B2C3D4E5F60123456789AB /* CookiesTests.swift in Sources */,
+				A1B2C3D4E5F60123456789B8 /* FirestoreIntegrationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4E6DC2462EF61140005145BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = W79P2M53MN;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4E6DC2472EF61140005145BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = W79P2M53MN;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4E6DC2492EF61140005145BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFCD5DF4CBD7D9B4C2560694 /* Pods-Cookies.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Cookies/Resources/Cookies.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W79P2M53MN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Config/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Cookies - A Screen Time App";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Scan NFC tokens to add screen time.";
+				INFOPLIST_KEY_NSFamilyControlsUsageDescription = "Manage Screen Time app limits for this device.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenwright.Cookies;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4E6DC24A2EF61140005145BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DEE6059E7194FA49ACACA85 /* Pods-Cookies.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Cookies/Resources/Cookies.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W79P2M53MN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Config/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Cookies - A Screen Time App";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Scan NFC tokens to add screen time.";
+				INFOPLIST_KEY_NSFamilyControlsUsageDescription = "Manage Screen Time app limits for this device.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenwright.Cookies;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A1B2C3D4E5F60123456789B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F671AA571CA7A51708192E59 /* Pods-CookiesTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CookiesTests;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenwright.CookiesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cookies.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cookies";
+				USES_XCTRUNNER = NO;
+			};
+			name = Debug;
+		};
+		A1B2C3D4E5F60123456789B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C006D0EECB1927E437B68A69 /* Pods-CookiesTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CookiesTests;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenwright.CookiesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cookies.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cookies";
+				USES_XCTRUNNER = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4E6DC2382EF6113F005145BA /* Build configuration list for PBXProject "Cookies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E6DC2462EF61140005145BA /* Debug */,
+				4E6DC2472EF61140005145BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E6DC2482EF61140005145BA /* Build configuration list for PBXNativeTarget "Cookies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E6DC2492EF61140005145BA /* Debug */,
+				4E6DC24A2EF61140005145BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1B2C3D4E5F60123456789B4 /* Build configuration list for PBXNativeTarget "CookiesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1B2C3D4E5F60123456789B5 /* Debug */,
+				A1B2C3D4E5F60123456789B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4E6DC2352EF6113F005145BA /* Project object */;
+}

@@ -1,0 +1,4 @@
+Pods/
+firebase-tests/node_modules/
+firebase-tests/.firebase/
+**/GoogleService-Info.plist
