@@ -17,6 +17,7 @@
 		837D2B4D2FAA9E9BE854138C /* UserProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C358F370030DE42E02051FA /* UserProfileManager.swift */; };
 		A884E8C400413329EF370671 /* ScreenTimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B6935D7EA7445CE8E59C7D /* ScreenTimeManager.swift */; };
 		61C7813A60D6D52390327410 /* TimeAllowanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343D4B2C32B5978878B4BE7E /* TimeAllowanceManager.swift */; };
+		C8E8B2D3E4F5061728394A5B /* BackgroundLockScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F7A1C2D3E4F5061728394A /* BackgroundLockScheduler.swift */; };
 		767A47E4969EC43156F5BD5F /* UsageSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08F2665C3D5FA5D2AB3158C /* UsageSessionManager.swift */; };
 		3026E030AA366BF3189A9E90 /* NFCScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C4BF17DC2D18C2F14F8590 /* NFCScanner.swift */; };
 		0145D04163038FB4994BCEE4 /* CookiePackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5813ACA343BF553F861A6B /* CookiePackService.swift */; };
@@ -87,6 +88,7 @@
 		0C358F370030DE42E02051FA /* UserProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileManager.swift; sourceTree = "<group>"; };
 		98B6935D7EA7445CE8E59C7D /* ScreenTimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeManager.swift; sourceTree = "<group>"; };
 		343D4B2C32B5978878B4BE7E /* TimeAllowanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAllowanceManager.swift; sourceTree = "<group>"; };
+		B7F7A1C2D3E4F5061728394A /* BackgroundLockScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundLockScheduler.swift; sourceTree = "<group>"; };
 		A08F2665C3D5FA5D2AB3158C /* UsageSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageSessionManager.swift; sourceTree = "<group>"; };
 		F3C4BF17DC2D18C2F14F8590 /* NFCScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCScanner.swift; sourceTree = "<group>"; };
 		3E5813ACA343BF553F861A6B /* CookiePackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookiePackService.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			children = (
 				98B6935D7EA7445CE8E59C7D /* ScreenTimeManager.swift */,
 				343D4B2C32B5978878B4BE7E /* TimeAllowanceManager.swift */,
+				B7F7A1C2D3E4F5061728394A /* BackgroundLockScheduler.swift */,
 				A08F2665C3D5FA5D2AB3158C /* UsageSessionManager.swift */,
 				0C358F370030DE42E02051FA /* UserProfileManager.swift */,
 			);
@@ -522,6 +525,7 @@
 				A884E8C400413329EF370671 /* ScreenTimeManager.swift in Sources */,
 				2DAF258EE2948E9B3928E954 /* SettingsView.swift in Sources */,
 				61C7813A60D6D52390327410 /* TimeAllowanceManager.swift in Sources */,
+				C8E8B2D3E4F5061728394A5B /* BackgroundLockScheduler.swift in Sources */,
 				767A47E4969EC43156F5BD5F /* UsageSessionManager.swift in Sources */,
 				7666772FABB988E652883A4E /* CookieService.swift in Sources */,
 				837D2B4D2FAA9E9BE854138C /* UserProfileManager.swift in Sources */,

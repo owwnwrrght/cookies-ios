@@ -23,6 +23,7 @@ final class TimeAllowanceManager: ObservableObject {
         didSet {
             saveEndDate()
             updateRemaining()
+            BackgroundLockScheduler.scheduleNextCheck(endDate: endDate)
         }
     }
     private var timer: Timer?

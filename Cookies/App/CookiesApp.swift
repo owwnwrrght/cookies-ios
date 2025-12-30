@@ -17,6 +17,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
+        BackgroundLockScheduler.register()
 #if DEBUG
         FirebaseConfiguration.shared.setLoggerLevel(.error)
 #endif
@@ -27,6 +28,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 #endif
         configureFirebaseEmulatorsIfNeeded()
         application.registerForRemoteNotifications()
+        application.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalMinimum)
 
         return true
     }
@@ -47,6 +49,14 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             completionHandler(.noData)
             return
         }
+        completionHandler(.noData)
+    }
+
+    func application(
+        _ application: UIApplication,
+        performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void
+    ) {
+        BackgroundLockScheduler.refreshLockStateIfNeeded()
         completionHandler(.noData)
     }
 
