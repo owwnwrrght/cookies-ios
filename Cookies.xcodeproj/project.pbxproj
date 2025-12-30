@@ -31,11 +31,38 @@
 		EDF7B7CCC1570B262D4AC59E /* InsightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FBA96C6844A89EE709DE4B /* InsightsView.swift */; };
 		DF8FD4F68CD2602D5B049E0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A8925F5A55E008D3ECF60 /* ContentView.swift */; };
 		E8F483E994D789804046046F /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF0C13B72B0ACA7E3EDEC5 /* ShieldConfigurationExtension.swift */; };
+		49CEFF02AA49474F9E1E0A18 /* ActivityReportExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1449A6447B02489888FC7285 /* ActivityReportExtension.swift */; };
+		4E2C403C20CE472794119146 /* ActivityReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3A5E97037D444E9043D6D0 /* ActivityReportView.swift */; };
 		A4BDDCB1A5BB40C68107F895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AE0E42D1FBC500FE6C89777 /* Assets.xcassets */; };
 		28DDB57EF5DB8680C81F979F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01BFF25AB63154E1DFB0005E /* LaunchScreen.storyboard */; };
 		24F6D6A5B48075040D5344B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA96B0D5ACE938C5B5699416 /* GoogleService-Info.plist */; };
 		A80966CFF153DF9154AC91E3 /* ShieldConfigurationInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4714DB90EDAAD0811E917A84 /* ShieldConfigurationInfo.plist */; };
+		81396C9E84D4412B8A714AE0 /* CookiesActivityReportExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B2A12AF896D54DCCB136D3BE /* CookiesActivityReportExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C483D6BD627148308B622F01 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				81396C9E84D4412B8A714AE0 /* CookiesActivityReportExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXContainerItemProxy section */
+		30A1CC3886364F1F994BD5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E6DC2352EF6113F005145BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02605C4C8BEB4F25B821A082;
+			remoteInfo = CookiesActivityReportExtension;
+		};
+/* End PBXContainerItemProxy section */
 
 
 
@@ -74,12 +101,17 @@
 		C7FBA96C6844A89EE709DE4B /* InsightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsView.swift; sourceTree = "<group>"; };
 		261A8925F5A55E008D3ECF60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8BBF0C13B72B0ACA7E3EDEC5 /* ShieldConfigurationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldConfigurationExtension.swift; sourceTree = "<group>"; };
+		1449A6447B02489888FC7285 /* ActivityReportExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityReportExtension.swift; sourceTree = "<group>"; };
+		9C3A5E97037D444E9043D6D0 /* ActivityReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityReportView.swift; sourceTree = "<group>"; };
+		6E3CF1D2E4B84A2BBE6B1C9D /* ActivityReportExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ActivityReportExtension.entitlements; sourceTree = "<group>"; };
 		7AE0E42D1FBC500FE6C89777 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "../Assets.xcassets"; sourceTree = "<group>"; };
 		01BFF25AB63154E1DFB0005E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA96B0D5ACE938C5B5699416 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3515935045C963E8CD219D60 /* Cookies.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cookies.entitlements; sourceTree = "<group>"; };
 		4714DB90EDAAD0811E917A84 /* ShieldConfigurationInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ShieldConfigurationInfo.plist; sourceTree = "<group>"; };
+		945158A592F14D0CA0DF76E3 /* ActivityReportInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ActivityReportInfo.plist; sourceTree = "<group>"; };
 		F640C07F8503462167BEBDE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2A12AF896D54DCCB136D3BE /* CookiesActivityReportExtension.appex */ = {isa = PBXFileReference; explicitFileType = wrapper.app-extension; includeInIndex = 0; path = CookiesActivityReportExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +120,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				98242B8CDF8F1BD143CB94B8 /* Pods_Cookies.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+
+		FED1A120EA6B4BF3BF69F78E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				4E6DC23D2EF6113F005145BA /* Cookies.app */,
+				B2A12AF896D54DCCB136D3BE /* CookiesActivityReportExtension.appex */,
 				A1B2C3D4E5F60123456789AE /* CookiesTests.xctest */,
 			);
 			name = Products;
@@ -249,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				94C69673881C44B3AF8000F5 /* ShieldConfigurationExtension */,
+				67AFA1DF279A493F81F1CAB6 /* ActivityReportExtension */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -262,6 +304,17 @@
 			path = ShieldConfigurationExtension;
 			sourceTree = "<group>";
 		};
+		67AFA1DF279A493F81F1CAB6 /* ActivityReportExtension */ = {
+			isa = PBXGroup;
+			children = (
+				1449A6447B02489888FC7285 /* ActivityReportExtension.swift */,
+				9C3A5E97037D444E9043D6D0 /* ActivityReportView.swift */,
+				945158A592F14D0CA0DF76E3 /* ActivityReportInfo.plist */,
+				6E3CF1D2E4B84A2BBE6B1C9D /* ActivityReportExtension.entitlements */,
+			);
+			path = ActivityReportExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -273,17 +326,36 @@
 				4E6DC2392EF6113F005145BA /* Sources */,
 				4E6DC23A2EF6113F005145BA /* Frameworks */,
 				4E6DC23B2EF6113F005145BA /* Resources */,
+				C483D6BD627148308B622F01 /* Embed App Extensions */,
 				6320F02F6C6ACD9A88FF14E6 /* [CP] Embed Pods Frameworks */,
 
 			);
 			buildRules = (
 			);
 			dependencies = (
+				26CDE58213344AEB8362E82D /* PBXTargetDependency */,
 			);
 			name = Cookies;
 			productName = Cookies;
 			productReference = 4E6DC23D2EF6113F005145BA /* Cookies.app */;
 			productType = "com.apple.product-type.application";
+		};
+		02605C4C8BEB4F25B821A082 /* CookiesActivityReportExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CF25767C0D64F49B733D5C7 /* Build configuration list for PBXNativeTarget "CookiesActivityReportExtension" */;
+			buildPhases = (
+				8B74D4C7432F42EEB966FE38 /* Sources */,
+				FED1A120EA6B4BF3BF69F78E /* Frameworks */,
+				E732B0FBAA654AB18A368968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CookiesActivityReportExtension;
+			productName = CookiesActivityReportExtension;
+			productReference = B2A12AF896D54DCCB136D3BE /* CookiesActivityReportExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		A1B2C3D4E5F60123456789B3 /* CookiesTests */ = {
 			isa = PBXNativeTarget;
@@ -312,6 +384,9 @@
 				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
+					02605C4C8BEB4F25B821A082 = {
+						CreatedOnToolsVersion = 26.0;
+					};
 					4E6DC23C2EF6113F005145BA = {
 						CreatedOnToolsVersion = 26.0;
 					};
@@ -336,6 +411,7 @@
 			projectRoot = "";
 			targets = (
 				4E6DC23C2EF6113F005145BA /* Cookies */,
+				02605C4C8BEB4F25B821A082 /* CookiesActivityReportExtension */,
 				A1B2C3D4E5F60123456789B3 /* CookiesTests */,
 			);
 		};
@@ -350,6 +426,13 @@
 				28DDB57EF5DB8680C81F979F /* LaunchScreen.storyboard in Resources */,
 				24F6D6A5B48075040D5344B7 /* GoogleService-Info.plist in Resources */,
 				A80966CFF153DF9154AC91E3 /* ShieldConfigurationInfo.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E732B0FBAA654AB18A368968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +529,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8B74D4C7432F42EEB966FE38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49CEFF02AA49474F9E1E0A18 /* ActivityReportExtension.swift in Sources */,
+				4E2C403C20CE472794119146 /* ActivityReportView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 
 		A1B2C3D4E5F60123456789B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -457,6 +549,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26CDE58213344AEB8362E82D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02605C4C8BEB4F25B821A082 /* CookiesActivityReportExtension */;
+			targetProxy = 30A1CC3886364F1F994BD5ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4E6DC2462EF61140005145BA /* Debug */ = {
@@ -658,6 +758,56 @@
 			};
 			name = Release;
 		};
+		105A33D204734F20824F21DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Cookies/Extensions/ActivityReportExtension/ActivityReportExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W79P2M53MN;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Cookies/Extensions/ActivityReportExtension/ActivityReportInfo.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenwright.Cookies.ActivityReportExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5E02F87B55EC4F4681173166 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Cookies/Extensions/ActivityReportExtension/ActivityReportExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W79P2M53MN;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Cookies/Extensions/ActivityReportExtension/ActivityReportInfo.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenwright.Cookies.ActivityReportExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		A1B2C3D4E5F60123456789B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F671AA571CA7A51708192E59 /* Pods-CookiesTests.debug.xcconfig */;
@@ -721,6 +871,15 @@
 			buildConfigurations = (
 				4E6DC2492EF61140005145BA /* Debug */,
 				4E6DC24A2EF61140005145BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CF25767C0D64F49B733D5C7 /* Build configuration list for PBXNativeTarget "CookiesActivityReportExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				105A33D204734F20824F21DB /* Debug */,
+				5E02F87B55EC4F4681173166 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

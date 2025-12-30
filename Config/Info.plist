@@ -25,6 +25,8 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>CookiesWebsiteBaseURL</key>
+	<string>https://cookies-c6de0.web.app</string>
 	<key>NFCReaderUsageDescription</key>
 	<string>Scan NFC tokens to add screen time.</string>
 	<key>NSFamilyControlsUsageDescription</key>

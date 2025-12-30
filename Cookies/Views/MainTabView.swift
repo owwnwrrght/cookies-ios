@@ -8,6 +8,9 @@
 import SwiftUI
 import Combine
 import FirebaseAuth
+import DeviceActivity
+import _DeviceActivity_SwiftUI
+import FamilyControls
 
 struct MainTabView: View {
     var body: some View {
@@ -216,8 +219,18 @@ private extension CookiesDashboardView {
 
 struct ActivityView: View {
     @EnvironmentObject private var authViewModel: AuthViewModel
+    @EnvironmentObject private var screenTimeManager: ScreenTimeManager
     @StateObject private var viewModel = InsightsViewModel()
+    @State private var isRequestingScreenTime = false
+    @State private var selectedSection: ActivitySection = .cookies
     private let refreshTimer = Timer.publish(every: 30, on: .main, in: .common).autoconnect()
+
+    private enum ActivitySection: String, CaseIterable, Identifiable {
+        case cookies = "Cookies"
+        case screenTime = "Screen Time"
+
+        var id: String { rawValue }
+    }
 
     fileprivate struct DayActivity: Identifiable {
         let id: String
@@ -303,34 +316,48 @@ struct ActivityView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.top, 10)
 
-                    if !viewModel.hasLoaded {
-                        ProgressView("Loading activity...")
-                            .padding(.top, 20)
-                    } else {
-                        if let todaySummary {
-                            ActivitySummaryCard(
-                                title: "Today",
-                                subtitle: "So far",
-                                metrics: todaySummary
-                            )
+                    Picker("Activity section", selection: $selectedSection) {
+                        ForEach(ActivitySection.allCases) { section in
+                            Text(section.rawValue)
+                                .tag(section)
                         }
+                    }
+                    .pickerStyle(.segmented)
+                    .tint(Color("CookiesAccent"))
+                    .padding(.top, 4)
 
-                        ActivitySummaryCard(
-                            title: "This Week",
-                            subtitle: "Last 7 days",
-                            metrics: weekSummary
-                        )
-
-                        VStack(alignment: .leading, spacing: 12) {
-                            Text("Daily breakdown")
-                                .font(.headline)
-                                .foregroundColor(Color("CookiesTextPrimary"))
-
-                            ForEach(dayActivities, id: \.id) { entry in
-                                ActivityRow(activity: entry)
+                    if selectedSection == .cookies {
+                        if !viewModel.hasLoaded {
+                            ProgressView("Loading activity...")
+                                .padding(.top, 20)
+                        } else {
+                            if let todaySummary {
+                                ActivitySummaryCard(
+                                    title: "Today",
+                                    subtitle: "So far",
+                                    metrics: todaySummary
+                                )
                             }
+
+                            ActivitySummaryCard(
+                                title: "This Week",
+                                subtitle: "Last 7 days",
+                                metrics: weekSummary
+                            )
+
+                            VStack(alignment: .leading, spacing: 12) {
+                                Text("Daily breakdown")
+                                    .font(.headline)
+                                    .foregroundColor(Color("CookiesTextPrimary"))
+
+                                ForEach(dayActivities, id: \.id) { entry in
+                                    ActivityRow(activity: entry)
+                                }
+                            }
+                            .frame(maxWidth: .infinity, alignment: .leading)
                         }
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                    } else {
+                        screenTimeSection
                     }
 
                     Spacer().frame(height: 80)
@@ -342,6 +369,7 @@ struct ActivityView: View {
             if let userId = authViewModel.user?.uid {
                 viewModel.startListening(userId: userId)
             }
+            screenTimeManager.refreshAuthorizationStatus()
             AnalyticsManager.logScreen("Activity", className: "ActivityView")
         }
         .onChange(of: authViewModel.user?.uid) { _, newValue in
@@ -358,6 +386,75 @@ struct ActivityView: View {
 }
 
 private extension ActivityView {
+    var isScreenTimeAuthorized: Bool {
+        screenTimeManager.authorizationStatus == .approved
+    }
+
+    var screenTimeSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Screen Time")
+                .font(.headline)
+                .foregroundColor(Color("CookiesTextPrimary"))
+
+            if isScreenTimeAuthorized {
+                VStack(spacing: 12) {
+                    screenTimeCard(
+                        context: DeviceActivityReport.Context("daily"),
+                        filter: dailyFilter
+                    )
+
+                    screenTimeCard(
+                        context: DeviceActivityReport.Context("weekly"),
+                        filter: weeklyFilter
+                    )
+                }
+            } else {
+                Text("Enable Screen Time to see daily and weekly usage plus your top apps.")
+                    .font(.subheadline)
+                    .foregroundColor(Color("CookiesTextSecondary"))
+
+                Button {
+                    requestScreenTimeAccess()
+                } label: {
+                    if isRequestingScreenTime {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle(tint: Color("CookiesAccent")))
+                    } else {
+                        Text("Enable Screen Time")
+                            .fontWeight(.semibold)
+                    }
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(Color("CookiesAccent"))
+                .disabled(isRequestingScreenTime)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    var dailyFilter: DeviceActivityFilter {
+        let now = Date()
+        let startOfDay = Calendar.current.startOfDay(for: now)
+        let interval = DateInterval(start: startOfDay, end: now)
+        return DeviceActivityFilter(
+            segment: .daily(during: interval),
+            users: .all,
+            devices: .all
+        )
+    }
+
+    var weeklyFilter: DeviceActivityFilter {
+        let now = Date()
+        let startOfToday = Calendar.current.startOfDay(for: now)
+        let startDate = Calendar.current.date(byAdding: .day, value: -6, to: startOfToday) ?? startOfToday
+        let interval = DateInterval(start: startDate, end: now)
+        return DeviceActivityFilter(
+            segment: .weekly(during: interval),
+            users: .all,
+            devices: .all
+        )
+    }
+
     func labelForDay(_ date: Date, today: Date) -> String {
         if Calendar.current.isDate(date, inSameDayAs: today) {
             return "Today"
@@ -367,6 +464,25 @@ private extension ActivityView {
         return formatter.string(from: date)
     }
 
+    func requestScreenTimeAccess() {
+        guard !isRequestingScreenTime else { return }
+        isRequestingScreenTime = true
+        Task {
+            await screenTimeManager.requestAuthorization()
+            await MainActor.run {
+                isRequestingScreenTime = false
+            }
+        }
+    }
+
+    func screenTimeCard(context: DeviceActivityReport.Context, filter: DeviceActivityFilter) -> some View {
+        DeviceActivityReport(context, filter: filter)
+            .frame(maxWidth: .infinity, minHeight: 190)
+            .padding(18)
+            .background(Color("CookiesSurface"))
+            .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+            .shadow(color: Color("Lead").opacity(0.08), radius: 8, x: 0, y: 4)
+    }
 }
 
 private struct ActivitySummaryCard: View {
