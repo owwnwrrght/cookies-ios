@@ -17,6 +17,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
+#if DEBUG
+        FirebaseConfiguration.shared.setLoggerLevel(.error)
+#endif
         configureAppCheck()
         FirebaseApp.configure()
 #if DEBUG

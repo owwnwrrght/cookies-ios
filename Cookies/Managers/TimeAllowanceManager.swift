@@ -12,6 +12,8 @@ final class TimeAllowanceManager: ObservableObject {
     @Published private(set) var remainingSeconds: TimeInterval = 0
     @Published private(set) var isUnlockActive = false
     @Published private(set) var sessionTotalSeconds: TimeInterval = 0
+    private let lastUserIdKey = "allowanceLastUserId"
+    private let pendingEndDateKey = "allowanceEndDate.pending"
     private var currentUserId: String?
     private var endDateDefaultsKey: String? {
         guard let currentUserId else { return nil }
@@ -30,6 +32,7 @@ final class TimeAllowanceManager: ObservableObject {
         remainingSeconds = 0
         isUnlockActive = false
         sessionTotalSeconds = 0
+        restoreCachedEndDate()
         startTimer()
     }
 
@@ -44,6 +47,9 @@ final class TimeAllowanceManager: ObservableObject {
         }
         endDate = newEndDate
         sessionTotalSeconds = max(sessionTotalSeconds, newEndDate.timeIntervalSince(now))
+        if currentUserId == nil {
+            UserDefaults.standard.set(newEndDate, forKey: pendingEndDateKey)
+        }
     }
 
     func refresh() {
@@ -51,17 +57,42 @@ final class TimeAllowanceManager: ObservableObject {
     }
 
     func setUserId(_ userId: String?) {
+        let defaults = UserDefaults.standard
         if userId == nil {
             currentUserId = nil
             endDate = nil
             sessionTotalSeconds = 0
+            defaults.removeObject(forKey: lastUserIdKey)
+            defaults.removeObject(forKey: pendingEndDateKey)
             return
         }
         guard currentUserId != userId else { return }
         currentUserId = userId
-        let saved = UserDefaults.standard.object(forKey: "allowanceEndDate.\(userId)") as? Date
-        endDate = saved
+        defaults.set(userId, forKey: lastUserIdKey)
+        let saved = defaults.object(forKey: "allowanceEndDate.\(userId)") as? Date
+        if let saved {
+            endDate = saved
+            defaults.removeObject(forKey: pendingEndDateKey)
+        } else if let pending = defaults.object(forKey: pendingEndDateKey) as? Date {
+            endDate = pending
+            defaults.removeObject(forKey: pendingEndDateKey)
+        } else {
+            endDate = nil
+        }
         sessionTotalSeconds = 0
+    }
+
+    private func restoreCachedEndDate() {
+        let defaults = UserDefaults.standard
+        if let lastUserId = defaults.string(forKey: lastUserIdKey) {
+            currentUserId = lastUserId
+            let saved = defaults.object(forKey: "allowanceEndDate.\(lastUserId)") as? Date
+            endDate = saved
+            return
+        }
+        if let pending = defaults.object(forKey: pendingEndDateKey) as? Date {
+            endDate = pending
+        }
     }
 
     private func startTimer() {
