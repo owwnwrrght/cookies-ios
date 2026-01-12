@@ -38,8 +38,15 @@ post_install do |installer|
           end
         end
       end
+
+      # Fix for Swift 6.x compatibility with Firebase modules
+      config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'NO'
+      config.build_settings['SWIFT_STRICT_CONCURRENCY'] = 'minimal'
+
+      # Ensure consistent deployment target
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '16.0'
     end
-    
+
     # Remove from file-specific compiler flags
     if target.respond_to?(:source_build_phase)
       target.source_build_phase.files.each do |file|
