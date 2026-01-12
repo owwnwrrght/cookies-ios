@@ -10,22 +10,52 @@ jobs:
     runs-on: macos-14
     steps:
       - uses: actions/checkout@v4
+
       - uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: "16.2"
-      - uses: actions/setup-node@v4
+
+      - name: Cache CocoaPods
+        uses: actions/cache@v4
         with:
-          node-version: "20"
-      - uses: actions/setup-java@v4
-        with:
-          distribution: "temurin"
-          java-version: "17"
+          path: |
+            Pods
+            ~/Library/Caches/CocoaPods
+          key: ${{ runner.os }}-pods-${{ hashFiles('Podfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-pods-
+
       - name: Install CocoaPods
         run: |
           if ! command -v pod >/dev/null 2>&1; then
             brew install cocoapods
           fi
+
+      - name: Install xcpretty
+        run: gem install xcpretty
+
       - name: Install Pods
         run: pod install
-      - name: Run tests
-        run: scripts/run_tests.sh
+
+      - name: Build and Test
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -workspace Cookies.xcworkspace \
+            -scheme Cookies \
+            -destination "platform=iOS Simulator,name=iPhone 16 Pro" \
+            -resultBundlePath TestResults \
+            -only-testing:CookiesTests \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            2>&1 | xcpretty --color --report junit --output test-results.xml
+
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: |
+            TestResults
+            test-results.xml
+          retention-days: 7
