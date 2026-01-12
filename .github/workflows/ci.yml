@@ -34,6 +34,13 @@ jobs:
       - name: Install xcpretty
         run: gem install xcpretty
 
+      - name: Create GoogleService-Info.plist
+        env:
+          GOOGLE_SERVICE_INFO_PLIST_BASE64: ${{ secrets.GOOGLE_SERVICE_INFO_PLIST_BASE64 }}
+        run: |
+          mkdir -p Cookies/Resources
+          echo "$GOOGLE_SERVICE_INFO_PLIST_BASE64" | base64 --decode > Cookies/Resources/GoogleService-Info.plist
+
       - name: Install Pods
         run: pod install
 
