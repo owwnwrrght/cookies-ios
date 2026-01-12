@@ -24,13 +24,25 @@ final class ScreenTimeManager: ObservableObject {
             applyShielding()
         }
     }
+    @Published var ultraHardcoreMode: Bool {
+        didSet {
+            UserDefaults.standard.set(ultraHardcoreMode, forKey: Self.ultraHardcoreModeKey)
+            applyShielding()
+        }
+    }
 
     private let store = ManagedSettingsStore()
-    private let selectionDefaultsKey = "familyActivitySelection"
+    private static let ultraHardcoreModeKey = "ultraHardcoreMode"
+    private static let selectionDefaultsKey = "familyActivitySelection"
+    private let appGroupId = "group.com.owenwright.Cookies"
+    private let appGroupDefaults: UserDefaults?
 
     init() {
         authorizationStatus = AuthorizationCenter.shared.authorizationStatus
-        selection = Self.loadSelection(forKey: selectionDefaultsKey)
+        appGroupDefaults = UserDefaults(suiteName: appGroupId)
+        ultraHardcoreMode = UserDefaults.standard.bool(forKey: Self.ultraHardcoreModeKey)
+        selection = Self.loadSelection(appGroupDefaults: appGroupDefaults)
+        saveSelection()
         applyShielding()
     }
 
@@ -69,6 +81,7 @@ final class ScreenTimeManager: ObservableObject {
             store.shield.applicationCategories = nil
             store.shield.webDomainCategories = nil
             store.shield.webDomains = nil
+            store.application.denyAppRemoval = false
             return
         }
 
@@ -77,9 +90,11 @@ final class ScreenTimeManager: ObservableObject {
             store.shield.applicationCategories = nil
             store.shield.webDomainCategories = nil
             store.shield.webDomains = nil
+            store.application.denyAppRemoval = false
             return
         }
 
+        // Blocking is active
         store.shield.applications = selection.applicationTokens.isEmpty
             ? nil
             : selection.applicationTokens
@@ -90,20 +105,34 @@ final class ScreenTimeManager: ObservableObject {
             ? nil
             : selection.webDomainTokens
         store.shield.webDomainCategories = nil
+
+        // Ultra Hardcore: prevent app deletion while blocking is active
+        store.application.denyAppRemoval = ultraHardcoreMode
     }
 
     private func saveSelection() {
         guard let data = try? JSONEncoder().encode(selection) else { return }
-        UserDefaults.standard.set(data, forKey: selectionDefaultsKey)
+        if let appGroupDefaults {
+            appGroupDefaults.set(data, forKey: Self.selectionDefaultsKey)
+            UserDefaults.standard.removeObject(forKey: Self.selectionDefaultsKey)
+        } else {
+            UserDefaults.standard.set(data, forKey: Self.selectionDefaultsKey)
+        }
     }
 
-    private static func loadSelection(forKey key: String) -> FamilyActivitySelection {
-        guard
-            let data = UserDefaults.standard.data(forKey: key),
-            let selection = try? JSONDecoder().decode(FamilyActivitySelection.self, from: data)
-        else {
-            return FamilyActivitySelection()
+    private static func loadSelection(appGroupDefaults: UserDefaults?) -> FamilyActivitySelection {
+        if let data = appGroupDefaults?.data(forKey: selectionDefaultsKey),
+           let selection = try? JSONDecoder().decode(FamilyActivitySelection.self, from: data) {
+            return selection
         }
-        return selection
+        if let data = UserDefaults.standard.data(forKey: selectionDefaultsKey),
+           let selection = try? JSONDecoder().decode(FamilyActivitySelection.self, from: data) {
+            if let appGroupDefaults {
+                appGroupDefaults.set(data, forKey: selectionDefaultsKey)
+                UserDefaults.standard.removeObject(forKey: selectionDefaultsKey)
+            }
+            return selection
+        }
+        return FamilyActivitySelection()
     }
 }

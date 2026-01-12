@@ -1,0 +1,270 @@
+[debug] [2026-01-08T03:13:46.865Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-08T03:13:46.866Z] > authorizing via signed-in user (owwnwrrght@gmail.com)
+[debug] [2026-01-08T03:13:46.866Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-08T03:13:46.866Z] > authorizing via signed-in user (owwnwrrght@gmail.com)
+[debug] [2026-01-08T03:13:46.867Z] Checked if tokens are valid: false, expires at: 1767741325455
+[debug] [2026-01-08T03:13:46.867Z] Checked if tokens are valid: false, expires at: 1767741325455
+[debug] [2026-01-08T03:13:46.867Z] > refreshing access token with scopes: []
+[debug] [2026-01-08T03:13:46.867Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-01-08T03:13:46.868Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-08T03:13:46.868Z] Checked if tokens are valid: false, expires at: 1767741325455
+[debug] [2026-01-08T03:13:46.868Z] Checked if tokens are valid: false, expires at: 1767741325455
+[debug] [2026-01-08T03:13:46.868Z] > refreshing access token with scopes: []
+[debug] [2026-01-08T03:13:46.869Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-01-08T03:13:46.869Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-08T03:13:46.869Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-08T03:13:46.869Z] > authorizing via signed-in user (owwnwrrght@gmail.com)
+[debug] [2026-01-08T03:13:46.869Z] Checked if tokens are valid: false, expires at: 1767741325455
+[debug] [2026-01-08T03:13:46.869Z] Checked if tokens are valid: false, expires at: 1767741325455
+[debug] [2026-01-08T03:13:46.869Z] > refreshing access token with scopes: []
+[debug] [2026-01-08T03:13:46.869Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-01-08T03:13:46.869Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-08T03:13:47.096Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-01-08T03:13:47.096Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-08T03:13:47.110Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo [none]
+[debug] [2026-01-08T03:13:47.112Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-01-08T03:13:47.112Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-08T03:13:47.124Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo [none]
+[debug] [2026-01-08T03:13:47.125Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-01-08T03:13:47.125Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-08T03:13:47.135Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo [none]
+[debug] [2026-01-08T03:13:47.363Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo 200
+[debug] [2026-01-08T03:13:47.363Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo {"name":"projects/ambassatour-d8501/billingInfo","projectId":"ambassatour-d8501","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-08T03:13:47.367Z] Checked if tokens are valid: true, expires at: 1767845626125
+[debug] [2026-01-08T03:13:47.367Z] Checked if tokens are valid: true, expires at: 1767845626125
+[debug] [2026-01-08T03:13:47.374Z] Checked if tokens are valid: true, expires at: 1767845626125
+[debug] [2026-01-08T03:13:47.374Z] Checked if tokens are valid: true, expires at: 1767845626125
+[debug] [2026-01-08T03:13:47.375Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-01-08T03:13:47.375Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/ambassatour-d8501
+[debug] [2026-01-08T03:13:47.376Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com [none]
+[debug] [2026-01-08T03:13:47.376Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com x-goog-quota-user=projects/ambassatour-d8501
+[debug] [2026-01-08T03:13:47.458Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo 200
+[debug] [2026-01-08T03:13:47.458Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo {"name":"projects/ambassatour-d8501/billingInfo","projectId":"ambassatour-d8501","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-08T03:13:47.458Z] Checked if tokens are valid: true, expires at: 1767845626125
+[debug] [2026-01-08T03:13:47.458Z] Checked if tokens are valid: true, expires at: 1767845626125
+[debug] [2026-01-08T03:13:47.459Z] Checked if tokens are valid: true, expires at: 1767845626125
+[debug] [2026-01-08T03:13:47.459Z] Checked if tokens are valid: true, expires at: 1767845626125
+[debug] [2026-01-08T03:13:47.459Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-01-08T03:13:47.459Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/ambassatour-d8501
+[debug] [2026-01-08T03:13:47.459Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com [none]
+[debug] [2026-01-08T03:13:47.459Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com x-goog-quota-user=projects/ambassatour-d8501
+[debug] [2026-01-08T03:13:47.493Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo 200
+[debug] [2026-01-08T03:13:47.493Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo {"name":"projects/ambassatour-d8501/billingInfo","projectId":"ambassatour-d8501","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-08T03:13:47.494Z] Checked if tokens are valid: true, expires at: 1767845626125
+[debug] [2026-01-08T03:13:47.494Z] Checked if tokens are valid: true, expires at: 1767845626125
+[debug] [2026-01-08T03:13:47.494Z] Checked if tokens are valid: true, expires at: 1767845626125
+[debug] [2026-01-08T03:13:47.495Z] Checked if tokens are valid: true, expires at: 1767845626125
+[debug] [2026-01-08T03:13:47.495Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-01-08T03:13:47.495Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/ambassatour-d8501
+[debug] [2026-01-08T03:13:47.495Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com [none]
+[debug] [2026-01-08T03:13:47.495Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com x-goog-quota-user=projects/ambassatour-d8501
+[debug] [2026-01-08T03:13:47.803Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com 403
+[debug] [2026-01-08T03:13:47.803Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com [omitted]
+[debug] [2026-01-08T03:13:47.806Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com 200
+[debug] [2026-01-08T03:13:47.806Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2026-01-08T03:13:47.840Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com 403
+[debug] [2026-01-08T03:13:47.840Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com [omitted]
+[debug] [2026-01-08T03:13:47.865Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com 403
+[debug] [2026-01-08T03:13:47.865Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com [omitted]
+[debug] [2026-01-08T03:13:47.985Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com 200
+[debug] [2026-01-08T03:13:47.985Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2026-01-08T03:13:47.998Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com 200
+[debug] [2026-01-08T03:13:47.998Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2026-01-08T03:13:48.030Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-08T03:13:48.030Z] > authorizing via signed-in user (owwnwrrght@gmail.com)
+[debug] [2026-01-08T03:13:48.030Z] Checked if tokens are valid: true, expires at: 1767845626125
+[debug] [2026-01-08T03:13:48.031Z] Checked if tokens are valid: true, expires at: 1767845626125
+[debug] [2026-01-08T03:13:48.031Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo [none]
+[debug] [2026-01-08T03:13:48.032Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-08T03:13:48.032Z] > authorizing via signed-in user (owwnwrrght@gmail.com)
+[debug] [2026-01-08T03:13:48.032Z] Checked if tokens are valid: true, expires at: 1767845626125
+[debug] [2026-01-08T03:13:48.032Z] Checked if tokens are valid: true, expires at: 1767845626125
+[debug] [2026-01-08T03:13:48.032Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo [none]
+[debug] [2026-01-08T03:13:48.109Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo 200
+[debug] [2026-01-08T03:13:48.109Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo {"name":"projects/ambassatour-d8501/billingInfo","projectId":"ambassatour-d8501","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-08T03:13:48.110Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-08T03:13:48.110Z] > authorizing via signed-in user (owwnwrrght@gmail.com)
+[debug] [2026-01-08T03:13:48.111Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo 200
+[debug] [2026-01-08T03:13:48.111Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo {"name":"projects/ambassatour-d8501/billingInfo","projectId":"ambassatour-d8501","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-08T03:13:48.112Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-08T03:13:48.112Z] > authorizing via signed-in user (owwnwrrght@gmail.com)
+[debug] [2026-01-08T19:46:28.132Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-08T19:46:28.133Z] > authorizing via signed-in user (owwnwrrght@gmail.com)
+[debug] [2026-01-08T19:46:28.134Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-08T19:46:28.134Z] > authorizing via signed-in user (owwnwrrght@gmail.com)
+[debug] [2026-01-08T19:46:28.134Z] Checked if tokens are valid: false, expires at: 1767845626125
+[debug] [2026-01-08T19:46:28.134Z] Checked if tokens are valid: false, expires at: 1767845626125
+[debug] [2026-01-08T19:46:28.134Z] > refreshing access token with scopes: []
+[debug] [2026-01-08T19:46:28.135Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-01-08T19:46:28.135Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-08T19:46:28.136Z] Checked if tokens are valid: false, expires at: 1767845626125
+[debug] [2026-01-08T19:46:28.136Z] Checked if tokens are valid: false, expires at: 1767845626125
+[debug] [2026-01-08T19:46:28.136Z] > refreshing access token with scopes: []
+[debug] [2026-01-08T19:46:28.136Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-01-08T19:46:28.136Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-08T19:46:28.136Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-08T19:46:28.136Z] > authorizing via signed-in user (owwnwrrght@gmail.com)
+[debug] [2026-01-08T19:46:28.136Z] Checked if tokens are valid: false, expires at: 1767845626125
+[debug] [2026-01-08T19:46:28.136Z] Checked if tokens are valid: false, expires at: 1767845626125
+[debug] [2026-01-08T19:46:28.136Z] > refreshing access token with scopes: []
+[debug] [2026-01-08T19:46:28.136Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-01-08T19:46:28.136Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-08T19:46:28.729Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-01-08T19:46:28.729Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-08T19:46:28.748Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo [none]
+[debug] [2026-01-08T19:46:28.751Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-01-08T19:46:28.751Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-08T19:46:28.763Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo [none]
+[debug] [2026-01-08T19:46:28.766Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-01-08T19:46:28.766Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-08T19:46:28.779Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo [none]
+[debug] [2026-01-08T19:46:29.260Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo 200
+[debug] [2026-01-08T19:46:29.260Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo {"name":"projects/ambassatour-d8501/billingInfo","projectId":"ambassatour-d8501","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-08T19:46:29.267Z] Checked if tokens are valid: true, expires at: 1767905187766
+[debug] [2026-01-08T19:46:29.267Z] Checked if tokens are valid: true, expires at: 1767905187766
+[debug] [2026-01-08T19:46:29.278Z] Checked if tokens are valid: true, expires at: 1767905187766
+[debug] [2026-01-08T19:46:29.278Z] Checked if tokens are valid: true, expires at: 1767905187766
+[debug] [2026-01-08T19:46:29.278Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-01-08T19:46:29.278Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/ambassatour-d8501
+[debug] [2026-01-08T19:46:29.280Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com [none]
+[debug] [2026-01-08T19:46:29.280Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com x-goog-quota-user=projects/ambassatour-d8501
+[debug] [2026-01-08T19:46:29.424Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo 200
+[debug] [2026-01-08T19:46:29.424Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo {"name":"projects/ambassatour-d8501/billingInfo","projectId":"ambassatour-d8501","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-08T19:46:29.425Z] Checked if tokens are valid: true, expires at: 1767905187766
+[debug] [2026-01-08T19:46:29.425Z] Checked if tokens are valid: true, expires at: 1767905187766
+[debug] [2026-01-08T19:46:29.426Z] Checked if tokens are valid: true, expires at: 1767905187766
+[debug] [2026-01-08T19:46:29.426Z] Checked if tokens are valid: true, expires at: 1767905187766
+[debug] [2026-01-08T19:46:29.426Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-01-08T19:46:29.426Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/ambassatour-d8501
+[debug] [2026-01-08T19:46:29.427Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com [none]
+[debug] [2026-01-08T19:46:29.427Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com x-goog-quota-user=projects/ambassatour-d8501
+[debug] [2026-01-08T19:46:29.449Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo 200
+[debug] [2026-01-08T19:46:29.449Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo {"name":"projects/ambassatour-d8501/billingInfo","projectId":"ambassatour-d8501","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-08T19:46:29.449Z] Checked if tokens are valid: true, expires at: 1767905187766
+[debug] [2026-01-08T19:46:29.449Z] Checked if tokens are valid: true, expires at: 1767905187766
+[debug] [2026-01-08T19:46:29.451Z] Checked if tokens are valid: true, expires at: 1767905187766
+[debug] [2026-01-08T19:46:29.451Z] Checked if tokens are valid: true, expires at: 1767905187766
+[debug] [2026-01-08T19:46:29.451Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-01-08T19:46:29.451Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/ambassatour-d8501
+[debug] [2026-01-08T19:46:29.451Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com [none]
+[debug] [2026-01-08T19:46:29.451Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com x-goog-quota-user=projects/ambassatour-d8501
+[debug] [2026-01-08T19:46:29.953Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com 200
+[debug] [2026-01-08T19:46:29.953Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2026-01-08T19:46:29.953Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com 403
+[debug] [2026-01-08T19:46:29.953Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com [omitted]
+[debug] [2026-01-08T19:46:30.130Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-08T19:46:30.130Z] > authorizing via signed-in user (owwnwrrght@gmail.com)
+[debug] [2026-01-08T19:46:30.130Z] Checked if tokens are valid: true, expires at: 1767905187766
+[debug] [2026-01-08T19:46:30.130Z] Checked if tokens are valid: true, expires at: 1767905187766
+[debug] [2026-01-08T19:46:30.130Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo [none]
+[debug] [2026-01-08T19:46:30.132Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com 403
+[debug] [2026-01-08T19:46:30.132Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com [omitted]
+[debug] [2026-01-08T19:46:30.132Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com 200
+[debug] [2026-01-08T19:46:30.132Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2026-01-08T19:46:30.133Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com 200
+[debug] [2026-01-08T19:46:30.133Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2026-01-08T19:46:30.134Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com 403
+[debug] [2026-01-08T19:46:30.134Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com [omitted]
+[debug] [2026-01-08T19:46:30.169Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-08T19:46:30.169Z] > authorizing via signed-in user (owwnwrrght@gmail.com)
+[debug] [2026-01-08T19:46:30.169Z] Checked if tokens are valid: true, expires at: 1767905187766
+[debug] [2026-01-08T19:46:30.169Z] Checked if tokens are valid: true, expires at: 1767905187766
+[debug] [2026-01-08T19:46:30.169Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo [none]
+[debug] [2026-01-08T19:46:30.309Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo 200
+[debug] [2026-01-08T19:46:30.309Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo {"name":"projects/ambassatour-d8501/billingInfo","projectId":"ambassatour-d8501","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-08T19:46:30.309Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-08T19:46:30.309Z] > authorizing via signed-in user (owwnwrrght@gmail.com)
+[debug] [2026-01-08T19:46:30.481Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo 200
+[debug] [2026-01-08T19:46:30.481Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo {"name":"projects/ambassatour-d8501/billingInfo","projectId":"ambassatour-d8501","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-08T19:46:30.482Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-08T19:46:30.482Z] > authorizing via signed-in user (owwnwrrght@gmail.com)
+[debug] [2026-01-12T18:18:59.642Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-12T18:18:59.643Z] > authorizing via signed-in user (owwnwrrght@gmail.com)
+[debug] [2026-01-12T18:18:59.643Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-12T18:18:59.643Z] > authorizing via signed-in user (owwnwrrght@gmail.com)
+[debug] [2026-01-12T18:18:59.644Z] Checked if tokens are valid: false, expires at: 1767905187766
+[debug] [2026-01-12T18:18:59.644Z] Checked if tokens are valid: false, expires at: 1767905187766
+[debug] [2026-01-12T18:18:59.644Z] > refreshing access token with scopes: []
+[debug] [2026-01-12T18:18:59.645Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-01-12T18:18:59.645Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-12T18:18:59.646Z] Checked if tokens are valid: false, expires at: 1767905187766
+[debug] [2026-01-12T18:18:59.646Z] Checked if tokens are valid: false, expires at: 1767905187766
+[debug] [2026-01-12T18:18:59.646Z] > refreshing access token with scopes: []
+[debug] [2026-01-12T18:18:59.646Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-01-12T18:18:59.646Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-12T18:18:59.647Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-12T18:18:59.647Z] > authorizing via signed-in user (owwnwrrght@gmail.com)
+[debug] [2026-01-12T18:18:59.647Z] Checked if tokens are valid: false, expires at: 1767905187766
+[debug] [2026-01-12T18:18:59.647Z] Checked if tokens are valid: false, expires at: 1767905187766
+[debug] [2026-01-12T18:18:59.647Z] > refreshing access token with scopes: []
+[debug] [2026-01-12T18:18:59.647Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-01-12T18:18:59.647Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-12T18:18:59.796Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-01-12T18:18:59.796Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-12T18:18:59.809Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo [none]
+[debug] [2026-01-12T18:18:59.812Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-01-12T18:18:59.812Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-12T18:18:59.824Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo [none]
+[debug] [2026-01-12T18:18:59.828Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-01-12T18:18:59.828Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-12T18:18:59.838Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo [none]
+[debug] [2026-01-12T18:18:59.994Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo 200
+[debug] [2026-01-12T18:18:59.995Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo {"name":"projects/ambassatour-d8501/billingInfo","projectId":"ambassatour-d8501","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-12T18:19:00.001Z] Checked if tokens are valid: true, expires at: 1768245538828
+[debug] [2026-01-12T18:19:00.001Z] Checked if tokens are valid: true, expires at: 1768245538828
+[debug] [2026-01-12T18:19:00.010Z] Checked if tokens are valid: true, expires at: 1768245538828
+[debug] [2026-01-12T18:19:00.010Z] Checked if tokens are valid: true, expires at: 1768245538828
+[debug] [2026-01-12T18:19:00.010Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-01-12T18:19:00.010Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/ambassatour-d8501
+[debug] [2026-01-12T18:19:00.011Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com [none]
+[debug] [2026-01-12T18:19:00.011Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com x-goog-quota-user=projects/ambassatour-d8501
+[debug] [2026-01-12T18:19:00.062Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo 200
+[debug] [2026-01-12T18:19:00.062Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo {"name":"projects/ambassatour-d8501/billingInfo","projectId":"ambassatour-d8501","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-12T18:19:00.062Z] Checked if tokens are valid: true, expires at: 1768245538828
+[debug] [2026-01-12T18:19:00.062Z] Checked if tokens are valid: true, expires at: 1768245538828
+[debug] [2026-01-12T18:19:00.063Z] Checked if tokens are valid: true, expires at: 1768245538828
+[debug] [2026-01-12T18:19:00.063Z] Checked if tokens are valid: true, expires at: 1768245538828
+[debug] [2026-01-12T18:19:00.063Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-01-12T18:19:00.063Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/ambassatour-d8501
+[debug] [2026-01-12T18:19:00.063Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com [none]
+[debug] [2026-01-12T18:19:00.063Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com x-goog-quota-user=projects/ambassatour-d8501
+[debug] [2026-01-12T18:19:00.100Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo 200
+[debug] [2026-01-12T18:19:00.100Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo {"name":"projects/ambassatour-d8501/billingInfo","projectId":"ambassatour-d8501","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-12T18:19:00.100Z] Checked if tokens are valid: true, expires at: 1768245538828
+[debug] [2026-01-12T18:19:00.100Z] Checked if tokens are valid: true, expires at: 1768245538828
+[debug] [2026-01-12T18:19:00.101Z] Checked if tokens are valid: true, expires at: 1768245538828
+[debug] [2026-01-12T18:19:00.101Z] Checked if tokens are valid: true, expires at: 1768245538828
+[debug] [2026-01-12T18:19:00.101Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-01-12T18:19:00.101Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/ambassatour-d8501
+[debug] [2026-01-12T18:19:00.101Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com [none]
+[debug] [2026-01-12T18:19:00.101Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com x-goog-quota-user=projects/ambassatour-d8501
+[debug] [2026-01-12T18:19:00.287Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com 403
+[debug] [2026-01-12T18:19:00.287Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com [omitted]
+[debug] [2026-01-12T18:19:00.338Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com 200
+[debug] [2026-01-12T18:19:00.338Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2026-01-12T18:19:00.390Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com 403
+[debug] [2026-01-12T18:19:00.390Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com [omitted]
+[debug] [2026-01-12T18:19:00.394Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com 403
+[debug] [2026-01-12T18:19:00.394Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebaseio.com [omitted]
+[debug] [2026-01-12T18:19:00.451Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-12T18:19:00.451Z] > authorizing via signed-in user (owwnwrrght@gmail.com)
+[debug] [2026-01-12T18:19:00.451Z] Checked if tokens are valid: true, expires at: 1768245538828
+[debug] [2026-01-12T18:19:00.451Z] Checked if tokens are valid: true, expires at: 1768245538828
+[debug] [2026-01-12T18:19:00.451Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo [none]
+[debug] [2026-01-12T18:19:00.511Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com 200
+[debug] [2026-01-12T18:19:00.511Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2026-01-12T18:19:00.511Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo 200
+[debug] [2026-01-12T18:19:00.512Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo {"name":"projects/ambassatour-d8501/billingInfo","projectId":"ambassatour-d8501","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-12T18:19:00.513Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-12T18:19:00.513Z] > authorizing via signed-in user (owwnwrrght@gmail.com)
+[debug] [2026-01-12T18:19:00.640Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com 200
+[debug] [2026-01-12T18:19:00.641Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ambassatour-d8501/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2026-01-12T18:19:00.699Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-12T18:19:00.699Z] > authorizing via signed-in user (owwnwrrght@gmail.com)
+[debug] [2026-01-12T18:19:00.699Z] Checked if tokens are valid: true, expires at: 1768245538828
+[debug] [2026-01-12T18:19:00.699Z] Checked if tokens are valid: true, expires at: 1768245538828
+[debug] [2026-01-12T18:19:00.699Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo [none]
+[debug] [2026-01-12T18:19:00.799Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo 200
+[debug] [2026-01-12T18:19:00.799Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/ambassatour-d8501/billingInfo {"name":"projects/ambassatour-d8501/billingInfo","projectId":"ambassatour-d8501","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-12T18:19:00.800Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-12T18:19:00.801Z] > authorizing via signed-in user (owwnwrrght@gmail.com)

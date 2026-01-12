@@ -14,9 +14,13 @@ enum BackgroundLockScheduler {
     static let taskIdentifier = "com.owenwright.Cookies.allowanceLockRefresh"
 
     private static let selectionDefaultsKey = "familyActivitySelection"
+    private static let appGroupId = "group.com.owenwright.Cookies"
     private static let lastUserIdKey = "allowanceLastUserId"
     private static let pendingEndDateKey = "allowanceEndDate.pending"
     private static let store = ManagedSettingsStore()
+    private static var appGroupDefaults: UserDefaults? {
+        UserDefaults(suiteName: appGroupId)
+    }
 
     static func register() {
         BGTaskScheduler.shared.register(forTaskWithIdentifier: taskIdentifier, using: nil) { task in
@@ -64,13 +68,19 @@ enum BackgroundLockScheduler {
     }
 
     private static func loadSelection() -> FamilyActivitySelection {
-        guard
-            let data = UserDefaults.standard.data(forKey: selectionDefaultsKey),
-            let selection = try? JSONDecoder().decode(FamilyActivitySelection.self, from: data)
-        else {
-            return FamilyActivitySelection()
+        if let data = appGroupDefaults?.data(forKey: selectionDefaultsKey),
+           let selection = try? JSONDecoder().decode(FamilyActivitySelection.self, from: data) {
+            return selection
         }
-        return selection
+        if let data = UserDefaults.standard.data(forKey: selectionDefaultsKey),
+           let selection = try? JSONDecoder().decode(FamilyActivitySelection.self, from: data) {
+            if let appGroupDefaults {
+                appGroupDefaults.set(data, forKey: selectionDefaultsKey)
+                UserDefaults.standard.removeObject(forKey: selectionDefaultsKey)
+            }
+            return selection
+        }
+        return FamilyActivitySelection()
     }
 
     private static func applyShielding(isUnlockActive: Bool) {

@@ -84,21 +84,11 @@ struct CookiesDashboardView: View {
                             }
                         }) {
                             ZStack {
-                                Circle()
-                                    .fill(Color("CookiesSurface"))
+                                Image("Cookie")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
                                     .frame(width: 240, height: 240)
                                     .shadow(color: Color("Lead").opacity(0.12), radius: 10, x: 0, y: 5)
-        
-                                VStack(spacing: 10) {
-                                    Image(systemName: isLocked ? "lock.fill" : "lock.open.fill")
-                                        .font(.system(size: 60))
-                                        .foregroundColor(isLocked ? Color("CookiesTextPrimary") : Color("CookiesTextSecondary"))
-        
-                                    Text(isLocked ? "Eat Cookie" : formattedTime(timeAllowanceManager.remainingSeconds))
-                                        .font(.headline)
-                                        .tracking(2)
-                                        .foregroundColor(isLocked ? Color("CookiesTextPrimary") : Color("CookiesTextSecondary"))
-                                }
                             }
                         }
                         .buttonStyle(PlainButtonStyle())

@@ -18,6 +18,7 @@
 		A884E8C400413329EF370671 /* ScreenTimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B6935D7EA7445CE8E59C7D /* ScreenTimeManager.swift */; };
 		61C7813A60D6D52390327410 /* TimeAllowanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343D4B2C32B5978878B4BE7E /* TimeAllowanceManager.swift */; };
 		C8E8B2D3E4F5061728394A5B /* BackgroundLockScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F7A1C2D3E4F5061728394A /* BackgroundLockScheduler.swift */; };
+		B5FF172AB5C8FDE73D55A5D7 /* AllowanceActivityScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3DE2B0D977D74CFAD638F4 /* AllowanceActivityScheduler.swift */; };
 		767A47E4969EC43156F5BD5F /* UsageSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08F2665C3D5FA5D2AB3158C /* UsageSessionManager.swift */; };
 		3026E030AA366BF3189A9E90 /* NFCScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C4BF17DC2D18C2F14F8590 /* NFCScanner.swift */; };
 		0145D04163038FB4994BCEE4 /* CookiePackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5813ACA343BF553F861A6B /* CookiePackService.swift */; };
@@ -34,11 +35,13 @@
 		E8F483E994D789804046046F /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF0C13B72B0ACA7E3EDEC5 /* ShieldConfigurationExtension.swift */; };
 		49CEFF02AA49474F9E1E0A18 /* ActivityReportExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1449A6447B02489888FC7285 /* ActivityReportExtension.swift */; };
 		4E2C403C20CE472794119146 /* ActivityReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3A5E97037D444E9043D6D0 /* ActivityReportView.swift */; };
+		B8F19982AA516470175B7059 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25ECB0DB2B153F6D05BA88B /* DeviceActivityMonitorExtension.swift */; };
 		A4BDDCB1A5BB40C68107F895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AE0E42D1FBC500FE6C89777 /* Assets.xcassets */; };
 		28DDB57EF5DB8680C81F979F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01BFF25AB63154E1DFB0005E /* LaunchScreen.storyboard */; };
 		24F6D6A5B48075040D5344B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA96B0D5ACE938C5B5699416 /* GoogleService-Info.plist */; };
 		A80966CFF153DF9154AC91E3 /* ShieldConfigurationInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4714DB90EDAAD0811E917A84 /* ShieldConfigurationInfo.plist */; };
-		81396C9E84D4412B8A714AE0 /* CookiesActivityReportExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B2A12AF896D54DCCB136D3BE /* CookiesActivityReportExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		81396C9E84D4412B8A714AE0 /* CookiesActivityReportExtension.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = B2A12AF896D54DCCB136D3BE /* CookiesActivityReportExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B7243064388D86D62D1F2BF0 /* CookiesDeviceActivityMonitorExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EE6E2C06B584F2420473DECE /* CookiesDeviceActivityMonitorExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,9 +51,20 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				81396C9E84D4412B8A714AE0 /* CookiesActivityReportExtension.appex in Embed App Extensions */,
+				B7243064388D86D62D1F2BF0 /* CookiesDeviceActivityMonitorExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1E5A0C0B1E2F3A4B5C6D7E8 /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				81396C9E84D4412B8A714AE0 /* CookiesActivityReportExtension.appex in Embed ExtensionKit Extensions */,
+			);
+			name = "Embed ExtensionKit Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -62,6 +76,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 02605C4C8BEB4F25B821A082;
 			remoteInfo = CookiesActivityReportExtension;
+		};
+		3111151EA0004A7FE5A601EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E6DC2352EF6113F005145BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A09A40DA27868BECB3C0BEDE;
+			remoteInfo = CookiesDeviceActivityMonitorExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -88,6 +109,7 @@
 		0C358F370030DE42E02051FA /* UserProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileManager.swift; sourceTree = "<group>"; };
 		98B6935D7EA7445CE8E59C7D /* ScreenTimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeManager.swift; sourceTree = "<group>"; };
 		343D4B2C32B5978878B4BE7E /* TimeAllowanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAllowanceManager.swift; sourceTree = "<group>"; };
+		4D3DE2B0D977D74CFAD638F4 /* AllowanceActivityScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowanceActivityScheduler.swift; sourceTree = "<group>"; };
 		B7F7A1C2D3E4F5061728394A /* BackgroundLockScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundLockScheduler.swift; sourceTree = "<group>"; };
 		A08F2665C3D5FA5D2AB3158C /* UsageSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageSessionManager.swift; sourceTree = "<group>"; };
 		F3C4BF17DC2D18C2F14F8590 /* NFCScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCScanner.swift; sourceTree = "<group>"; };
@@ -106,6 +128,9 @@
 		1449A6447B02489888FC7285 /* ActivityReportExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityReportExtension.swift; sourceTree = "<group>"; };
 		9C3A5E97037D444E9043D6D0 /* ActivityReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityReportView.swift; sourceTree = "<group>"; };
 		6E3CF1D2E4B84A2BBE6B1C9D /* ActivityReportExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ActivityReportExtension.entitlements; sourceTree = "<group>"; };
+		E25ECB0DB2B153F6D05BA88B /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityMonitorExtension.swift; sourceTree = "<group>"; };
+		2A104AE69B80A111B75F89FC /* DeviceActivityMonitorInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DeviceActivityMonitorInfo.plist; sourceTree = "<group>"; };
+		88C04E51ED43DA1E0DD4C032 /* DeviceActivityMonitorExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeviceActivityMonitorExtension.entitlements; sourceTree = "<group>"; };
 		7AE0E42D1FBC500FE6C89777 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "../Assets.xcassets"; sourceTree = "<group>"; };
 		01BFF25AB63154E1DFB0005E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA96B0D5ACE938C5B5699416 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -113,7 +138,8 @@
 		4714DB90EDAAD0811E917A84 /* ShieldConfigurationInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ShieldConfigurationInfo.plist; sourceTree = "<group>"; };
 		945158A592F14D0CA0DF76E3 /* ActivityReportInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ActivityReportInfo.plist; sourceTree = "<group>"; };
 		F640C07F8503462167BEBDE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2A12AF896D54DCCB136D3BE /* CookiesActivityReportExtension.appex */ = {isa = PBXFileReference; explicitFileType = wrapper.app-extension; includeInIndex = 0; path = CookiesActivityReportExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2A12AF896D54DCCB136D3BE /* CookiesActivityReportExtension.appex */ = {isa = PBXFileReference; explicitFileType = wrapper.extensionkit-extension; includeInIndex = 0; path = CookiesActivityReportExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE6E2C06B584F2420473DECE /* CookiesDeviceActivityMonitorExtension.appex */ = {isa = PBXFileReference; explicitFileType = wrapper.app-extension; includeInIndex = 0; path = CookiesDeviceActivityMonitorExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +153,14 @@
 		};
 
 		FED1A120EA6B4BF3BF69F78E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+
+		91CFF5ECEC519CDFD0D1B170 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -177,6 +211,7 @@
 			children = (
 				4E6DC23D2EF6113F005145BA /* Cookies.app */,
 				B2A12AF896D54DCCB136D3BE /* CookiesActivityReportExtension.appex */,
+				EE6E2C06B584F2420473DECE /* CookiesDeviceActivityMonitorExtension.appex */,
 				A1B2C3D4E5F60123456789AE /* CookiesTests.xctest */,
 			);
 			name = Products;
@@ -230,6 +265,7 @@
 			children = (
 				98B6935D7EA7445CE8E59C7D /* ScreenTimeManager.swift */,
 				343D4B2C32B5978878B4BE7E /* TimeAllowanceManager.swift */,
+				4D3DE2B0D977D74CFAD638F4 /* AllowanceActivityScheduler.swift */,
 				B7F7A1C2D3E4F5061728394A /* BackgroundLockScheduler.swift */,
 				A08F2665C3D5FA5D2AB3158C /* UsageSessionManager.swift */,
 				0C358F370030DE42E02051FA /* UserProfileManager.swift */,
@@ -294,6 +330,7 @@
 			children = (
 				94C69673881C44B3AF8000F5 /* ShieldConfigurationExtension */,
 				67AFA1DF279A493F81F1CAB6 /* ActivityReportExtension */,
+				3BEF57E5B290584B8E3FD319 /* DeviceActivityMonitorExtension */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -318,25 +355,37 @@
 			path = ActivityReportExtension;
 			sourceTree = "<group>";
 		};
+		3BEF57E5B290584B8E3FD319 /* DeviceActivityMonitorExtension */ = {
+			isa = PBXGroup;
+			children = (
+				E25ECB0DB2B153F6D05BA88B /* DeviceActivityMonitorExtension.swift */,
+				2A104AE69B80A111B75F89FC /* DeviceActivityMonitorInfo.plist */,
+				88C04E51ED43DA1E0DD4C032 /* DeviceActivityMonitorExtension.entitlements */,
+			);
+			path = DeviceActivityMonitorExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
 		4E6DC23C2EF6113F005145BA /* Cookies */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E6DC2482EF61140005145BA /* Build configuration list for PBXNativeTarget "Cookies" */;
-			buildPhases = (
-				565E4244ACD227C02FF3131D /* [CP] Check Pods Manifest.lock */,
-				4E6DC2392EF6113F005145BA /* Sources */,
-				4E6DC23A2EF6113F005145BA /* Frameworks */,
-				4E6DC23B2EF6113F005145BA /* Resources */,
-				C483D6BD627148308B622F01 /* Embed App Extensions */,
-				6320F02F6C6ACD9A88FF14E6 /* [CP] Embed Pods Frameworks */,
+				buildPhases = (
+					565E4244ACD227C02FF3131D /* [CP] Check Pods Manifest.lock */,
+					4E6DC2392EF6113F005145BA /* Sources */,
+					4E6DC23A2EF6113F005145BA /* Frameworks */,
+					4E6DC23B2EF6113F005145BA /* Resources */,
+					C483D6BD627148308B622F01 /* Embed App Extensions */,
+					D1E5A0C0B1E2F3A4B5C6D7E8 /* Embed ExtensionKit Extensions */,
+					6320F02F6C6ACD9A88FF14E6 /* [CP] Embed Pods Frameworks */,
 
-			);
+				);
 			buildRules = (
 			);
 			dependencies = (
 				26CDE58213344AEB8362E82D /* PBXTargetDependency */,
+				B3F850D5D8F9DC01A789F1F0 /* PBXTargetDependency */,
 			);
 			name = Cookies;
 			productName = Cookies;
@@ -358,6 +407,23 @@
 			name = CookiesActivityReportExtension;
 			productName = CookiesActivityReportExtension;
 			productReference = B2A12AF896D54DCCB136D3BE /* CookiesActivityReportExtension.appex */;
+			productType = "com.apple.product-type.extensionkit-extension";
+		};
+		A09A40DA27868BECB3C0BEDE /* CookiesDeviceActivityMonitorExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 426EA40F210E79E184B8CB0B /* Build configuration list for PBXNativeTarget "CookiesDeviceActivityMonitorExtension" */;
+			buildPhases = (
+				4768BEBABF73B3F459FCE7A3 /* Sources */,
+				91CFF5ECEC519CDFD0D1B170 /* Frameworks */,
+				1F145F449E7FBC031790A6D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CookiesDeviceActivityMonitorExtension;
+			productName = CookiesDeviceActivityMonitorExtension;
+			productReference = EE6E2C06B584F2420473DECE /* CookiesDeviceActivityMonitorExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		A1B2C3D4E5F60123456789B3 /* CookiesTests */ = {
@@ -393,6 +459,9 @@
 					4E6DC23C2EF6113F005145BA = {
 						CreatedOnToolsVersion = 26.0;
 					};
+					A09A40DA27868BECB3C0BEDE = {
+						CreatedOnToolsVersion = 26.0;
+					};
 					A1B2C3D4E5F60123456789B3 = {
 						CreatedOnToolsVersion = 26.0;
 					};
@@ -415,6 +484,7 @@
 			targets = (
 				4E6DC23C2EF6113F005145BA /* Cookies */,
 				02605C4C8BEB4F25B821A082 /* CookiesActivityReportExtension */,
+				A09A40DA27868BECB3C0BEDE /* CookiesDeviceActivityMonitorExtension */,
 				A1B2C3D4E5F60123456789B3 /* CookiesTests */,
 			);
 		};
@@ -433,6 +503,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E732B0FBAA654AB18A368968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F145F449E7FBC031790A6D2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -525,6 +602,7 @@
 				A884E8C400413329EF370671 /* ScreenTimeManager.swift in Sources */,
 				2DAF258EE2948E9B3928E954 /* SettingsView.swift in Sources */,
 				61C7813A60D6D52390327410 /* TimeAllowanceManager.swift in Sources */,
+				B5FF172AB5C8FDE73D55A5D7 /* AllowanceActivityScheduler.swift in Sources */,
 				C8E8B2D3E4F5061728394A5B /* BackgroundLockScheduler.swift in Sources */,
 				767A47E4969EC43156F5BD5F /* UsageSessionManager.swift in Sources */,
 				7666772FABB988E652883A4E /* CookieService.swift in Sources */,
@@ -539,6 +617,15 @@
 			files = (
 				49CEFF02AA49474F9E1E0A18 /* ActivityReportExtension.swift in Sources */,
 				4E2C403C20CE472794119146 /* ActivityReportView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+
+		4768BEBABF73B3F459FCE7A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F19982AA516470175B7059 /* DeviceActivityMonitorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +646,11 @@
 			isa = PBXTargetDependency;
 			target = 02605C4C8BEB4F25B821A082 /* CookiesActivityReportExtension */;
 			targetProxy = 30A1CC3886364F1F994BD5ED /* PBXContainerItemProxy */;
+		};
+		B3F850D5D8F9DC01A789F1F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A09A40DA27868BECB3C0BEDE /* CookiesDeviceActivityMonitorExtension */;
+			targetProxy = 3111151EA0004A7FE5A601EF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -812,6 +904,57 @@
 			};
 			name = Release;
 		};
+		005F98003BA669D0FFE3B49D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
+				CODE_SIGN_ENTITLEMENTS = Cookies/Extensions/DeviceActivityMonitorExtension/DeviceActivityMonitorExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W79P2M53MN;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Cookies/Extensions/DeviceActivityMonitorExtension/DeviceActivityMonitorInfo.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenwright.Cookies.DeviceActivityMonitorExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3374BC9A6F8230B92E3A7D75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Cookies/Extensions/DeviceActivityMonitorExtension/DeviceActivityMonitorExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W79P2M53MN;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Cookies/Extensions/DeviceActivityMonitorExtension/DeviceActivityMonitorInfo.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenwright.Cookies.DeviceActivityMonitorExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		A1B2C3D4E5F60123456789B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F671AA571CA7A51708192E59 /* Pods-CookiesTests.debug.xcconfig */;
@@ -884,6 +1027,15 @@
 			buildConfigurations = (
 				105A33D204734F20824F21DB /* Debug */,
 				5E02F87B55EC4F4681173166 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		426EA40F210E79E184B8CB0B /* Build configuration list for PBXNativeTarget "CookiesDeviceActivityMonitorExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				005F98003BA669D0FFE3B49D /* Debug */,
+				3374BC9A6F8230B92E3A7D75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

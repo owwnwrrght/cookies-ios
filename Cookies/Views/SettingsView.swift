@@ -206,6 +206,26 @@ struct SettingsView: View {
                     .background(Color("CookiesSurface"))
                     .cornerRadius(16)
 
+                    VStack(alignment: .leading, spacing: 12) {
+                        HStack {
+                            Text("Ultra Hardcore Mode")
+                                .font(.headline)
+                                .foregroundColor(Color("CookiesTextPrimary"))
+                            Spacer()
+                            Toggle("", isOn: $screenTimeManager.ultraHardcoreMode)
+                                .labelsHidden()
+                                .tint(Color("CookiesAccent"))
+                                .disabled(!timeAllowanceManager.isUnlockActive)
+                        }
+
+                        Text(ultraHardcoreStatusText)
+                            .font(.subheadline)
+                            .foregroundColor(Color("CookiesTextSecondary"))
+                    }
+                    .padding(20)
+                    .background(Color("CookiesSurface"))
+                    .cornerRadius(16)
+
                     VStack(alignment: .leading, spacing: 16) {
                         Text("About cookie")
                             .font(.headline)
@@ -320,6 +340,19 @@ private extension SettingsView {
             return "You can update blocked apps while your timer is running."
         }
         return "Start a timer to edit blocked apps."
+    }
+
+    var ultraHardcoreStatusText: String {
+        if screenTimeManager.ultraHardcoreMode {
+            if timeAllowanceManager.isUnlockActive {
+                return "When your timer ends, you won't be able to delete any apps until you scan another cookie."
+            }
+            return "App deletion is blocked. Scan a cookie to modify this setting."
+        }
+        if timeAllowanceManager.isUnlockActive {
+            return "When enabled, prevents deleting any apps while blocking is active."
+        }
+        return "Start a timer to enable this setting."
     }
 
     var cookieValueStatusText: String {
