@@ -12,12 +12,12 @@
 		<key>CookiesActivityReportExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>43</integer>
+			<integer>45</integer>
 		</dict>
 		<key>CookiesDeviceActivityMonitorExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>44</integer>
+			<integer>46</integer>
 		</dict>
 		<key>CookiesTests.xcscheme_^#shared#^_</key>
 		<dict>

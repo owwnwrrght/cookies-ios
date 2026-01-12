@@ -7,16 +7,16 @@ target 'Cookies' do
   # Pods for Cookies
 
 # Add the Firebase pod for Google Analytics
-pod 'FirebaseAnalytics', '10.29.0'
+pod 'FirebaseAnalytics', '~> 11.0'
 
 # For Analytics without IDFA collection capability, use this pod instead
 # pod FirebaseAnalytics/Core
 
 # Add the pods for any other Firebase products you want to use in your app
 # For example, to use Firebase Authentication and Cloud Firestore
-pod 'FirebaseAuth', '10.29.0'
-pod 'FirebaseFirestore', '10.29.0'
-pod 'FirebaseAppCheck', '10.29.0'
+pod 'FirebaseAuth', '~> 11.0'
+pod 'FirebaseFirestore', '~> 11.0'
+pod 'FirebaseAppCheck', '~> 11.0'
 
   target 'CookiesTests' do
     inherit! :search_paths
